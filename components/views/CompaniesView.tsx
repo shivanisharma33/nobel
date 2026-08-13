@@ -1,0 +1,351 @@
+"use client";
+
+import React from "react";
+
+interface CompaniesViewProps {
+  onNavigate: (view: string) => void;
+}
+
+export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
+  const handleNavClick = (view: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    onNavigate(view);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const icons = [
+    <path key="1" d="M4 21h16M6 21V8l4-3v16M14 21V10h4v11M9.5 9h.01M9.5 12h.01M9.5 15h.01" />,
+    <path key="2" d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z" />,
+    <path key="3" d="M4 20h16M5 20V9h14v11M3 9l9-5 9 5M9 20v-6h6v6" />,
+    <React.Fragment key="4">
+      <circle cx="12" cy="8" r="3.4" />
+      <path d="M5.5 20c.7-3.7 3.1-5.6 6.5-5.6s5.8 1.9 6.5 5.6" />
+    </React.Fragment>,
+  ];
+
+  return (
+    <div className="pview on" id="pv-companies">
+      {/* BREADCRUMB */}
+      <div className="wrap crumbs">
+        <a href="#home" onClick={(e) => handleNavClick("home", e)}>
+          Home
+        </a>
+        <span className="sep">&rsaquo;</span>Participating Companies &amp; Sponsors
+      </div>
+
+      {/* HERO */}
+      <section className="pc-hero">
+        <img
+          className="hero-art"
+          src="/assets/hero-art.webp"
+          alt="Waterfront at sunset in Boca Raton, Florida"
+        />
+        <div className="hero-scrim"></div>
+        <div className="wrap pc-hero-inner">
+          <h1>
+            PARTICIPATING COMPANIES
+            <br />
+            <span className="gr">&amp; SPONSORS</span>
+          </h1>
+          <p>
+            Discover the mining companies presenting and the partners supporting THE
+            Noble Mining Investment Conference.
+          </p>
+          <div className="hero-btns">
+            <button
+              className="btn-teal"
+              type="button"
+              onClick={() => alert("Registration opening soon!")}
+            >
+              REGISTER TO STAY UPDATED{" "}
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* COMING SOON CENTERPIECE */}
+      <section className="pc-soon">
+        <svg
+          className="pc-soon-art left"
+          viewBox="0 0 500 400"
+          preserveAspectRatio="xMidYMid slice"
+          aria-hidden="true"
+        >
+          <rect width="500" height="400" fill="#0a2f2c" />
+          <g>
+            <path d="M120 400 L180 120 L250 400 Z" fill="#1e8f77" />
+            <path d="M180 120 L250 400 L212 400 Z" fill="#43dcb4" opacity=".8" />
+            <path d="M230 400 L300 160 L380 400 Z" fill="#15705f" />
+            <path d="M300 160 L380 400 L332 400 Z" fill="#2fbf9c" opacity=".85" />
+            <path d="M60 400 L110 200 L170 400 Z" fill="#0f5045" />
+            <path d="M110 200 L170 400 L132 400 Z" fill="#27ae8d" opacity=".7" />
+            <path d="M340 400 L400 210 L470 400 Z" fill="#0f5a4c" />
+            <path d="M400 210 L470 400 L426 400 Z" fill="#38c9a4" opacity=".7" />
+          </g>
+          <g fill="#c8f5e8" opacity=".5">
+            <path d="M180 120 L192 162 L172 158 Z" />
+            <path d="M300 160 L312 198 L290 194 Z" />
+            <path d="M400 210 L410 242 L392 238 Z" />
+          </g>
+        </svg>
+        <svg
+          className="pc-soon-art"
+          viewBox="0 0 500 400"
+          preserveAspectRatio="xMidYMid slice"
+          aria-hidden="true"
+        >
+          <rect width="500" height="400" fill="#0a2f2c" />
+          <g>
+            <path d="M120 400 L180 120 L250 400 Z" fill="#1e8f77" />
+            <path d="M180 120 L250 400 L212 400 Z" fill="#43dcb4" opacity=".8" />
+            <path d="M230 400 L300 160 L380 400 Z" fill="#15705f" />
+            <path d="M300 160 L380 400 L332 400 Z" fill="#2fbf9c" opacity=".85" />
+            <path d="M60 400 L110 200 L170 400 Z" fill="#0f5045" />
+            <path d="M110 200 L170 400 L132 400 Z" fill="#27ae8d" opacity=".7" />
+            <path d="M340 400 L400 210 L470 400 Z" fill="#0f5a4c" />
+            <path d="M400 210 L470 400 L426 400 Z" fill="#38c9a4" opacity=".7" />
+          </g>
+          <g fill="#c8f5e8" opacity=".5">
+            <path d="M180 120 L192 162 L172 158 Z" />
+            <path d="M300 160 L312 198 L290 194 Z" />
+            <path d="M400 210 L410 242 L392 238 Z" />
+          </g>
+        </svg>
+        <div className="pc-soon-scrim"></div>
+        <div className="pc-soon-inner">
+          <span className="pc-soon-badge">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 8v4l3 2" />
+            </svg>
+            ANNOUNCEMENTS PENDING
+          </span>
+          <h2>
+            Coming <span className="gr">Soon</span>
+          </h2>
+          <p>
+            Our participating mining companies and sponsors will be announced here
+            soon. Register your interest to be the first to know as the lineup is
+            confirmed.
+          </p>
+          <div className="pc-soon-btns">
+            <button
+              className="btn-teal"
+              type="button"
+              onClick={() => alert("Registration opening soon!")}
+            >
+              REGISTER TO STAY UPDATED{" "}
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+            <button
+              className="btn-ghost"
+              type="button"
+              onClick={() => alert("Contact form opening soon!")}
+            >
+              CONTACT US
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* WHAT TO EXPECT */}
+      <section className="pc-expect">
+        <div className="wrap">
+          <div className="pc-expect-head">
+            <div className="eyebrow">WHAT TO EXPECT</div>
+            <h2>A Curated Investment Lineup</h2>
+          </div>
+          <div className="pc-expect-grid">
+            <div className="pce">
+              <span className="pce-ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M4 21h16M6 21V8l4-3v16M14 21V10h4v11M9.5 9h.01M9.5 12h.01M9.5 15h.01" />
+                </svg>
+              </span>
+              <b>
+                Up to 60
+                <br />
+                Mining Companies
+              </b>
+              <p>Presenting and meeting with active investors across two days.</p>
+            </div>
+            <div className="pce">
+              <span className="pce-ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z" />
+                </svg>
+              </span>
+              <b>
+                Global
+                <br />
+                Sponsors
+              </b>
+              <p>Industry partners supporting the conference across the value chain.</p>
+            </div>
+            <div className="pce">
+              <span className="pce-ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M8.5 12.5L5 9.5 8 6l4 1.5L16 6l3 3.5-3.5 3M8.5 12.5l3.5 3.4 3.5-3.4M8.5 12.5L11 15M15.5 12.5L13 15" />
+                </svg>
+              </span>
+              <b>
+                1:1 Investor
+                <br />
+                Access
+              </b>
+              <p>Pre-scheduled meetings with funds, family offices and HNWIs.</p>
+            </div>
+            <div className="pce">
+              <span className="pce-ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                >
+                  <circle cx="12" cy="6" r="2.6" />
+                  <circle cx="6" cy="17" r="2.6" />
+                  <circle cx="18" cy="17" r="2.6" />
+                  <path d="M10.5 8l-3 6.5M13.5 8l3 6.5M8.6 17h6.8" />
+                </svg>
+              </span>
+              <b>
+                Gala
+                <br />
+                Networking
+              </b>
+              <p>Exclusive networking including the February 17 gala event.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PLACEHOLDER ROSTER */}
+      <section className="pc-roster">
+        <div className="wrap">
+          <div className="pc-roster-head">
+            <div className="eyebrow">THE LINEUP</div>
+            <h2>Companies &amp; Sponsors</h2>
+          </div>
+          <p className="pc-roster-note">
+            Participating company and sponsor announcements will appear here as they are
+            confirmed.
+          </p>
+          <div className="pc-roster-grid" id="pcRoster">
+            {Array.from({ length: 8 }).map((_, i) => (
+              <div key={i} className="pcr">
+                <span className="pcr-ic">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    {icons[i % icons.length]}
+                  </svg>
+                </span>
+                <span>COMING SOON</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="pc-cta">
+        <div className="pc-cta-band">
+          <div className="pc-cta-copy">
+            <div className="eyebrow">GET INVOLVED</div>
+            <h2>Interested in Participating or Sponsoring?</h2>
+            <p>
+              Mining companies and prospective sponsors are welcome to get in touch.
+              Register on this website or contact us directly for more information.
+            </p>
+          </div>
+          <div className="pc-cta-side">
+            <div className="pc-cta-row">
+              <span className="ci">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+                </svg>
+              </span>
+              647-964-0292
+            </div>
+            <div className="pc-cta-row">
+              <span className="ci">
+                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinejoin="round">
+                  <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
+                  <path d="M4 7l8 6 8-6" />
+                </svg>
+              </span>
+              <a href="mailto:jchoi@irinc.ca">jchoi@irinc.ca</a>
+            </div>
+            <button
+              className="btn-ghost"
+              type="button"
+              onClick={() => alert("Registration opening soon!")}
+            >
+              REGISTER HERE{" "}
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
