@@ -37,7 +37,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             <br />
             <span className="gr">THE CONFERENCE</span>
           </h1>
-          <p>
+          <p className="dek">
             THE Noble Mining Investment Conference brings together global leaders,
             innovators, and investors to shape a more sustainable and prosperous mining
             industry.
@@ -46,7 +46,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             <button
               className="btn-teal"
               type="button"
-              onClick={() => alert("Registration opening soon!")}
+              onClick={() => onNavigate("register")}
             >
               REGISTER HERE{" "}
               <svg
@@ -83,79 +83,11 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
       <section className="collab">
         <div className="wrap collab-grid">
           <div className="collab-photo">
-            <svg viewBox="0 0 620 460" xmlns="http://www.w3.org/2000/svg">
-              <rect width="620" height="460" fill="#0b1e2a" />
-              <g fill="#10394a" opacity=".7">
-                <path d="M40 460 L90 140 L140 460 Z" />
-                <path d="M480 460 L530 140 L580 460 Z" />
-              </g>
-              <rect x="140" y="80" width="340" height="170" rx="6" fill="#123c4c" />
-              <rect x="148" y="88" width="324" height="154" rx="4" fill="#1a5a60" />
-              <g transform="translate(248,146)">
-                <path
-                  d="M0 32 V0 L7 0 L21 24 V0 L28 0 V32 L21 32 L7 8 V32 Z"
-                  fill="#fff"
-                  transform="scale(0.95)"
-                />
-                <text
-                  x="40"
-                  y="17"
-                  fontFamily="Inter,system-ui,sans-serif"
-                  fontSize="18"
-                  fontWeight="600"
-                  fill="#fff"
-                  letterSpacing="2"
-                >
-                  NOBLE
-                </text>
-                <text
-                  x="40"
-                  y="31"
-                  fontFamily="Inter,sans-serif"
-                  fontSize="6.8"
-                  fontWeight="700"
-                  letterSpacing="1.9"
-                  fill="#a9d8ce"
-                >
-                  MINING CONFERENCE
-                </text>
-              </g>
-              <rect x="150" y="262" width="320" height="36" rx="5" fill="#0e2f3d" />
-              <g fill="#0a1c26">
-                <circle cx="180" cy="248" r="10" />
-                <rect x="171" y="258" width="18" height="28" rx="5" />
-                <circle cx="240" cy="252" r="10" />
-                <rect x="231" y="262" width="18" height="26" rx="5" />
-                <circle cx="300" cy="250" r="10" />
-                <rect x="291" y="260" width="18" height="27" rx="5" />
-                <circle cx="360" cy="252" r="10" />
-                <rect x="351" y="262" width="18" height="26" rx="5" />
-                <circle cx="420" cy="248" r="10" />
-                <rect x="411" y="258" width="18" height="28" rx="5" />
-              </g>
-              <g fill="#08141d">
-                <ellipse cx="80" cy="370" rx="27" ry="16" />
-                <ellipse cx="142" cy="386" rx="29" ry="17" />
-                <ellipse cx="208" cy="372" rx="27" ry="16" />
-                <ellipse cx="272" cy="388" rx="29" ry="17" />
-                <ellipse cx="336" cy="374" rx="27" ry="16" />
-                <ellipse cx="400" cy="389" rx="29" ry="17" />
-                <ellipse cx="464" cy="372" rx="27" ry="16" />
-                <ellipse cx="528" cy="386" rx="29" ry="17" />
-                <ellipse cx="582" cy="374" rx="25" ry="15" />
-                <ellipse cx="112" cy="420" rx="31" ry="18" />
-                <ellipse cx="184" cy="432" rx="33" ry="19" />
-                <ellipse cx="258" cy="422" rx="31" ry="18" />
-                <ellipse cx="332" cy="434" rx="33" ry="19" />
-                <ellipse cx="406" cy="422" rx="31" ry="18" />
-                <ellipse cx="480" cy="434" rx="33" ry="19" />
-                <ellipse cx="550" cy="424" rx="31" ry="18" />
-              </g>
-              <g fill="#2fbf9c" opacity=".25">
-                <path d="M0 460 L60 190 L120 460 Z" />
-                <path d="M500 460 L560 190 L620 460 Z" />
-              </g>
-            </svg>
+            <img
+              src="/assets/nobel-con.jpeg"
+              alt="Noble Mining Conference Collaboration"
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            />
           </div>
           <div>
             <div className="eyebrow">ABOUT THE CONFERENCE</div>
@@ -188,59 +120,61 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               one-on-one meetings, presentations, and exceptional networking
               opportunities.
             </p>
-            <div className="cfeat">
-              <span className="ci">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                >
-                  <circle cx="9" cy="8" r="3.2" />
-                  <path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19" />
-                  <circle cx="16.5" cy="9" r="2.6" />
-                  <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
-                </svg>
-              </span>
-              One-on-one investor meetings
-            </div>
-            <div className="cfeat">
-              <span className="ci">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="4" y="5" width="16" height="12" rx="2" />
-                  <path d="M9 20h6M12 17v3M8 12l2.5-3 2 2 3-4" />
-                </svg>
-              </span>
-              Company presentations &amp; keynotes
-            </div>
-            <div className="cfeat">
-              <span className="ci">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                >
-                  <circle cx="12" cy="6" r="2.6" />
-                  <circle cx="6" cy="17" r="2.6" />
-                  <circle cx="18" cy="17" r="2.6" />
-                  <path d="M10.5 8l-3 6.5M13.5 8l3 6.5M8.6 17h6.8" />
-                </svg>
-              </span>
-              Exclusive networking events
+            <div className="feat-list">
+              <div className="feat-li">
+                <span className="fi">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                  >
+                    <circle cx="9" cy="8" r="3.2" />
+                    <path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19" />
+                    <circle cx="16.5" cy="9" r="2.6" />
+                    <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
+                  </svg>
+                </span>
+                One-on-one investor meetings
+              </div>
+              <div className="feat-li">
+                <span className="fi">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <rect x="4" y="5" width="16" height="12" rx="2" />
+                    <path d="M9 20h6M12 17v3M8 12l2.5-3 2 2 3-4" />
+                  </svg>
+                </span>
+                Company presentations &amp; keynotes
+              </div>
+              <div className="feat-li">
+                <span className="fi">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                  >
+                    <circle cx="12" cy="6" r="2.6" />
+                    <circle cx="6" cy="17" r="2.6" />
+                    <circle cx="18" cy="17" r="2.6" />
+                    <path d="M10.5 8l-3 6.5M13.5 8l3 6.5M8.6 17h6.8" />
+                  </svg>
+                </span>
+                Exclusive networking events
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* WHO SHOULD ATTEND */}
-      <section className="audience">
+      <section className="aud">
         <div className="wrap">
           <div className="aud-head">
             <div className="eyebrow">WHO SHOULD ATTEND?</div>
@@ -330,14 +264,14 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
       </section>
 
       {/* WHY ATTEND */}
-      <section className="why2">
+      <section className="exp">
         <div className="wrap">
-          <div className="why2-head">
+          <div className="exp-head">
             <div className="eyebrow">WHY ATTEND?</div>
             <h2>A Premier Mining Investment Experience</h2>
           </div>
-          <div className="why2-grid">
-            <div className="w2">
+          <div className="exp-grid">
+            <div className="exp-i">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -350,7 +284,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               <b>Global Participation</b>
               <p>Engage with investors and industry leaders from more than 25+ countries.</p>
             </div>
-            <div className="w2">
+            <div className="exp-i">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -365,7 +299,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               <b>Quality Connections</b>
               <p>Pre-scheduled one-on-one meetings with active investors.</p>
             </div>
-            <div className="w2">
+            <div className="exp-i">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -378,7 +312,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               <b>Actionable Insights</b>
               <p>Gain market intelligence and explore new investment opportunities.</p>
             </div>
-            <div className="w2">
+            <div className="exp-i">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -435,8 +369,8 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             <h2>Have Questions?</h2>
             <p className="qc">We're here to help you with any inquiries about the conference.</p>
           </div>
-          <div className="qrow">
-            <span className="qi">
+          <div className="q-item">
+            <span className="q-ic">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -449,14 +383,14 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             </span>
             647-964-0292
           </div>
-          <div className="qrow">
-            <span className="qi">
+          <div className="q-item">
+            <span className="q-ic">
               <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinejoin="round">
                 <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
                 <path d="M4 7l8 6 8-6" />
               </svg>
             </span>
-            <a href="mailto:jchoi@irinc.ca">jchoi@irinc.ca</a>
+            <a href="mailto:jchoi@irinc.ca" style={{ color: "#fff" }}>jchoi@irinc.ca</a>
           </div>
           <button
             className="btn-ghost"

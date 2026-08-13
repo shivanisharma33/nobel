@@ -64,60 +64,11 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
 
       {/* COMING SOON CENTERPIECE */}
       <section className="pc-soon">
-        <svg
-          className="pc-soon-art left"
-          viewBox="0 0 500 400"
-          preserveAspectRatio="xMidYMid slice"
-          aria-hidden="true"
-        >
-          <rect width="500" height="400" fill="#0a2f2c" />
-          <g fill="#2fbf9c" opacity=".1">
-            <path d="M500 -20 L120 400 L200 400 Z" />
-            <path d="M500 -20 L240 400 L320 400 Z" />
-            <path d="M500 -20 L360 400 L440 400 Z" />
-            <path d="M500 -20 L60 400 L120 400 Z" />
-          </g>
-          <circle cx="470" cy="34" r="46" fill="#43dcb4" opacity=".22" />
-          <circle cx="470" cy="34" r="24" fill="#7cffdf" opacity=".28" />
-          <g fill="none" stroke="#43dcb4" opacity=".16">
-            <circle cx="470" cy="34" r="90" />
-            <circle cx="470" cy="34" r="140" />
-            <circle cx="470" cy="34" r="190" />
-          </g>
-          <g fill="#c8f5e8" opacity=".4">
-            <circle cx="300" cy="120" r="2" />
-            <circle cx="360" cy="200" r="2.4" />
-            <circle cx="220" cy="260" r="2" />
-            <circle cx="410" cy="300" r="2.4" />
-          </g>
-        </svg>
-        <svg
-          className="pc-soon-art"
-          viewBox="0 0 500 400"
-          preserveAspectRatio="xMidYMid slice"
-          aria-hidden="true"
-        >
-          <rect width="500" height="400" fill="#0a2f2c" />
-          <g fill="#2fbf9c" opacity=".1">
-            <path d="M500 -20 L120 400 L200 400 Z" />
-            <path d="M500 -20 L240 400 L320 400 Z" />
-            <path d="M500 -20 L360 400 L440 400 Z" />
-            <path d="M500 -20 L60 400 L120 400 Z" />
-          </g>
-          <circle cx="470" cy="34" r="46" fill="#43dcb4" opacity=".22" />
-          <circle cx="470" cy="34" r="24" fill="#7cffdf" opacity=".28" />
-          <g fill="none" stroke="#43dcb4" opacity=".16">
-            <circle cx="470" cy="34" r="90" />
-            <circle cx="470" cy="34" r="140" />
-            <circle cx="470" cy="34" r="190" />
-          </g>
-          <g fill="#c8f5e8" opacity=".4">
-            <circle cx="300" cy="120" r="2" />
-            <circle cx="360" cy="200" r="2.4" />
-            <circle cx="220" cy="260" r="2" />
-            <circle cx="410" cy="300" r="2.4" />
-          </g>
-        </svg>
+        <img
+          className="pc-soon-bg"
+          src="/assets/hero-art.webp"
+          alt="Boca Raton Waterfront"
+        />
         <div className="pc-soon-scrim"></div>
         <div className="pc-soon-inner">
           <span className="pc-soon-badge">

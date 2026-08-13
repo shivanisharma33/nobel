@@ -26,14 +26,9 @@ export default function Header({ activeView, onNavigate }: HeaderProps) {
           href="#home"
           onClick={(e) => handleNavClick("home", e)}
         >
-          <img
-            className="brand-mark"
-            src="/assets/brand-mark.webp"
-            alt="Noble"
-          />
-          <div className="brand-txt">
-            <b>NOBLE</b>
-            <span>MINING CONFERENCE</span>
+          <div className="noble-cm">
+            <img src="/assets/noble-cm.webp" alt="Noble Capital Markets" />
+            <span className="ncm-cap">NOBLE CAPITAL MARKETS</span>
           </div>
         </a>
         <nav className="main">
@@ -82,9 +77,7 @@ export default function Header({ activeView, onNavigate }: HeaderProps) {
           className="btn-register"
           type="button"
           aria-label="Register for event"
-          onClick={() => {
-            alert("Registration opening soon!");
-          }}
+          onClick={(e) => handleNavClick("register", e)}
         >
           <span>REGISTER</span>
           <svg
@@ -133,6 +126,9 @@ export default function Header({ activeView, onNavigate }: HeaderProps) {
         </a>
         <a href="#speakers" onClick={(e) => handleNavClick("speakers", e)}>
           Speakers
+        </a>
+        <a href="#register" onClick={(e) => handleNavClick("register", e)}>
+          Register
         </a>
       </div>
     </header>

@@ -2,149 +2,236 @@
 
 import React from "react";
 
+interface Partner {
+  id: string;
+  tag: string;
+  content: React.ReactNode;
+}
+
 export default function PartnerMarquee() {
-  const logos = [
+  const row1: Partner[] = [
+    {
+      id: "tmx",
+      tag: "Stock Exchange",
+      content: (
+        <img
+          src="/assets/04-TMX.png"
+          alt="TMX Group"
+          className="partner-logo-img"
+        />
+      ),
+    },
+    {
+      id: "stifel",
+      tag: "Investment Banking",
+      content: (
+        <img
+          src="/assets/stifel-logo-resized.jpg"
+          alt="Stifel"
+          className="partner-logo-img"
+        />
+      ),
+    },
+    {
+      id: "cse",
+      tag: "Securities Exchange",
+      content: (
+        <img
+          src="/assets/CSE-Logo-RGB.webp"
+          alt="Canadian Securities Exchange"
+          className="partner-logo-img"
+        />
+      ),
+    },
+    {
+      id: "maxit",
+      tag: "Financial Advisory",
+      content: (
+        <img
+          src="/assets/maxit_st_cmyk_lg.webp"
+          alt="Maxit Capital"
+          className="partner-logo-img"
+        />
+      ),
+    },
+    {
+      id: "ventum",
+      tag: "Capital Markets",
+      content: (
+        <img
+          src="/assets/Ventum_Financial_RGB.webp"
+          alt="Ventum Capital Markets"
+          className="partner-logo-img"
+        />
+      ),
+    },
+    {
+      id: "red-cloud",
+      tag: "Mining Advisory",
+      content: (
+        <img
+          src="/assets/image (2).webp"
+          alt="Red Cloud Securities"
+          className="partner-logo-img"
+        />
+      ),
+    },
+    {
+      id: "noble-cm",
+      tag: "Capital Markets",
+      content: (
+        <img
+          src="/assets/noble-cm.webp"
+          alt="Noble Capital Markets"
+          className="partner-logo-img"
+        />
+      ),
+    },
+    {
+      id: "altitude",
+      tag: "Capital Partners",
+      content: (
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <svg width="28" height="22" viewBox="0 0 26 20">
+            <path d="M3 17 L8 8 L11 12 L15 4 L18 9 L21 3 L23 17 Z" fill="#1e6b3a" />
+            <path d="M15 4 L18 9 L21 3" stroke="#e8b12c" strokeWidth="1.4" fill="none" />
+          </svg>
+          <span className="stk" style={{ textAlign: "left" }}>
+            <span style={{ color: "#1e6b3a", fontSize: "14px", fontWeight: 800 }}>
+              ALTITUDE<span style={{ color: "#10262c" }}>CAPITAL</span>
+            </span>
+            <span style={{ fontSize: "8.5px", letterSpacing: ".22em", color: "#6e8489", fontWeight: 700 }}>
+              PARTNERS
+            </span>
+          </span>
+        </div>
+      ),
+    },
+  ];
+
+  const row2: Partner[] = [
     {
       id: "mining-ir",
+      tag: "Investor Relations",
       content: (
-        <>
-          <svg width="22" height="22" viewBox="0 0 22 22">
-            <circle cx="11" cy="11" r="9.5" fill="none" stroke="#2fbf9c" strokeWidth="2" />
-            <path d="M6.5 14 L9 8 L11 12 L13 8 L15.5 14" fill="none" stroke="#10262c" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          <span>Mining<span style={{ color: "#1e8f77" }}>IR</span></span>
-        </>
+        <img
+          src="/assets/logo-miningir.png"
+          alt="Mining IR"
+          className="partner-logo-img"
+        />
       ),
     },
     {
       id: "mining-discovery",
+      tag: "Industry News",
       content: (
-        <>
-          <svg width="20" height="18" viewBox="0 0 22 20">
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <svg width="26" height="24" viewBox="0 0 22 20">
             <path d="M4 16 Q4 5 15 4 Q9 8 8 16 Z" fill="#c99a3f" />
           </svg>
-          <span style={{ fontFamily: "Inter,system-ui,sans-serif", color: "#8a6a2a", fontStyle: "italic", fontWeight: 600 }}>
+          <span style={{ fontFamily: "Inter,system-ui,sans-serif", color: "#8a6a2a", fontStyle: "italic", fontWeight: 700, fontSize: "18px" }}>
             Mining Discovery
           </span>
-        </>
+        </div>
       ),
     },
     {
       id: "rctv",
+      tag: "Broadcast Media",
       content: (
-        <>
-          <svg width="12" height="12" viewBox="0 0 14 14">
-            <circle cx="7" cy="7" r="6" fill="#e8442c" />
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <svg width="18" height="18" viewBox="0 0 18 18">
+            <circle cx="9" cy="9" r="8" fill="#e8442c" />
           </svg>
-          <span style={{ letterSpacing: ".1em" }}>RCTV</span>
-        </>
+          <span style={{ letterSpacing: ".14em", fontWeight: 800, color: "#10262c", fontSize: "19px" }}>RCTV</span>
+        </div>
       ),
     },
     {
       id: "vid",
+      tag: "Video Platform",
       content: (
-        <span style={{ fontSize: "23px", fontWeight: 800, background: "linear-gradient(90deg,#25b8a0,#2f8fd4)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>
+        <span style={{ fontSize: "28px", fontWeight: 800, background: "linear-gradient(90deg,#25b8a0,#2f8fd4)", WebkitBackgroundClip: "text", backgroundClip: "text", color: "transparent" }}>
           VID
         </span>
       ),
     },
     {
       id: "money-channel",
+      tag: "Financial Media",
       content: (
-        <span className="stk">
-          <span style={{ fontFamily: "Inter,system-ui,sans-serif", color: "#10262c", fontSize: "13px" }}>THE MONEY CHANNEL</span>
-          <span style={{ fontSize: "7px", letterSpacing: ".2em", color: "#6e8489", fontWeight: 600 }}>NEW YORK CITY</span>
-        </span>
+        <div className="stk">
+          <span style={{ fontFamily: "Inter,system-ui,sans-serif", color: "#10262c", fontSize: "15px", fontWeight: 800 }}>THE MONEY CHANNEL</span>
+          <span style={{ fontSize: "8.5px", letterSpacing: ".22em", color: "#6e8489", fontWeight: 700 }}>NEW YORK CITY</span>
+        </div>
       ),
     },
     {
-      id: "tmx",
+      id: "tmx-media",
+      tag: "Stock Exchange",
       content: (
-        <span className="stk">
-          <span style={{ color: "#10262c", fontSize: "16px", letterSpacing: ".06em" }}>TMX</span>
-          <span style={{ fontSize: "6.5px", letterSpacing: ".12em", color: "#6e8489", fontWeight: 600 }}>THE FUTURE IS YOURS TO SEE.</span>
-        </span>
+        <img
+          src="/assets/04-TMX.png"
+          alt="TMX Group"
+          className="partner-logo-img"
+        />
       ),
     },
     {
-      id: "stifel",
+      id: "cse-media",
+      tag: "Securities Exchange",
       content: (
-        <span style={{ fontFamily: "'Inter',system-ui,sans-serif", color: "#10262c", fontSize: "19px", letterSpacing: ".12em" }}>
-          STIFEL
-        </span>
-      ),
-    },
-    {
-      id: "cse",
-      content: (
-        <>
-          <span style={{ color: "#1479c4", fontSize: "17px", letterSpacing: ".05em" }}>CSE</span>
-          <span className="stk" style={{ textAlign: "left" }}>
-            <span style={{ fontSize: "7px", letterSpacing: ".06em", color: "#6e8489", fontWeight: 700 }}>CANADIAN</span>
-            <span style={{ fontSize: "7px", letterSpacing: ".04em", color: "#6e8489", fontWeight: 700 }}>SECURITIES EXCHANGE</span>
-          </span>
-        </>
-      ),
-    },
-    {
-      id: "maxit",
-      content: (
-        <span className="stk">
-          <span style={{ color: "#10262c", fontSize: "15px", letterSpacing: ".14em" }}>MAXIT</span>
-          <span style={{ color: "#10262c", fontSize: "11px", letterSpacing: ".22em" }}>CAPITAL</span>
-        </span>
-      ),
-    },
-    {
-      id: "altitude",
-      content: (
-        <>
-          <svg width="24" height="18" viewBox="0 0 26 20">
-            <path d="M3 17 L8 8 L11 12 L15 4 L18 9 L21 3 L23 17 Z" fill="#1e6b3a" />
-            <path d="M15 4 L18 9 L21 3" stroke="#e8b12c" strokeWidth="1.4" fill="none" />
-          </svg>
-          <span className="stk" style={{ textAlign: "left" }}>
-            <span style={{ color: "#1e6b3a", fontSize: "10.5px", fontWeight: 800 }}>ALTITUDE<span style={{ color: "#10262c" }}>CAPITAL</span></span>
-            <span style={{ fontSize: "7px", letterSpacing: ".22em", color: "#6e8489", fontWeight: 700 }}>PARTNERS</span>
-          </span>
-        </>
-      ),
-    },
-    {
-      id: "ventum",
-      content: (
-        <span className="stk">
-          <span style={{ color: "#10262c", fontSize: "16px", fontWeight: 600 }}>Ventum<span style={{ color: "#c8a02c" }}>◆</span></span>
-          <span style={{ fontSize: "7px", letterSpacing: ".16em", color: "#6e8489", fontWeight: 700 }}>CAPITAL MARKETS</span>
-        </span>
-      ),
-    },
-    {
-      id: "red-cloud",
-      content: (
-        <>
-          <svg width="24" height="16" viewBox="0 0 26 18">
-            <path d="M4 12 Q4 6 9 6 Q10 2 15 3 Q20 2 21 7 Q25 8 23 12 Z" fill="none" stroke="#c8102e" strokeWidth="1.6" />
-          </svg>
-          <span style={{ color: "#c8102e", letterSpacing: ".05em" }}>RED CLOUD</span>
-        </>
+        <img
+          src="/assets/CSE-Logo-RGB.webp"
+          alt="Canadian Securities Exchange"
+          className="partner-logo-img"
+        />
       ),
     },
   ];
 
-  const duplicatedLogos = [...logos, ...logos];
+  const duplicatedRow1 = [...row1, ...row1, ...row1];
+  const duplicatedRow2 = [...row2, ...row2, ...row2];
 
   return (
-    <section className="partners-band" aria-label="Media and Industry Partners">
+    <section className="partners-band" aria-label="Featured Media and Industry Partners">
       <div className="wrap">
-        <div className="partners-title">FEATURED MEDIA &amp; INDUSTRY PARTNERS</div>
-        <div className="marquee">
-          <div className="marquee-track" id="partnerTrack">
-            {duplicatedLogos.map((item, index) => (
-              <span key={`${item.id}-${index}`} className="lg">
-                {item.content}
-              </span>
-            ))}
+        <div className="partners-header">
+          <div className="partners-badge">
+            <span className="partners-badge-dot"></span>
+            Global Network &amp; Ecosystem
+          </div>
+          <h2 className="partners-title">
+            FEATURED MEDIA &amp; <span className="highlight">INDUSTRY PARTNERS</span>
+          </h2>
+          <p className="partners-subtitle">
+            Supported by leading stock exchanges, investment banks, capital market advisors, and global mining media networks.
+          </p>
+        </div>
+
+        <div className="marquee-container">
+          {/* Row 1: Left Marquee */}
+          <div className="marquee">
+            <div className="marquee-track">
+              {duplicatedRow1.map((item, index) => (
+                <div key={`r1-${item.id}-${index}`} className="partner-card">
+                  <span className="partner-card-tag">{item.tag}</span>
+                  {item.content}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2: Right Marquee */}
+          <div className="marquee">
+            <div className="marquee-track-reverse">
+              {duplicatedRow2.map((item, index) => (
+                <div key={`r2-${item.id}-${index}`} className="partner-card">
+                  <span className="partner-card-tag">{item.tag}</span>
+                  {item.content}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -74,52 +74,11 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
 
       {/* COMING SOON CENTERPIECE */}
       <section className="pc-soon">
-        <svg
-          className="pc-soon-art left"
-          viewBox="0 0 500 400"
-          preserveAspectRatio="xMidYMid slice"
-          aria-hidden="true"
-        >
-          <rect width="500" height="400" fill="#0a2f2c" />
-          <g>
-            <path d="M120 400 L180 120 L250 400 Z" fill="#1e8f77" />
-            <path d="M180 120 L250 400 L212 400 Z" fill="#43dcb4" opacity=".8" />
-            <path d="M230 400 L300 160 L380 400 Z" fill="#15705f" />
-            <path d="M300 160 L380 400 L332 400 Z" fill="#2fbf9c" opacity=".85" />
-            <path d="M60 400 L110 200 L170 400 Z" fill="#0f5045" />
-            <path d="M110 200 L170 400 L132 400 Z" fill="#27ae8d" opacity=".7" />
-            <path d="M340 400 L400 210 L470 400 Z" fill="#0f5a4c" />
-            <path d="M400 210 L470 400 L426 400 Z" fill="#38c9a4" opacity=".7" />
-          </g>
-          <g fill="#c8f5e8" opacity=".5">
-            <path d="M180 120 L192 162 L172 158 Z" />
-            <path d="M300 160 L312 198 L290 194 Z" />
-            <path d="M400 210 L410 242 L392 238 Z" />
-          </g>
-        </svg>
-        <svg
-          className="pc-soon-art"
-          viewBox="0 0 500 400"
-          preserveAspectRatio="xMidYMid slice"
-          aria-hidden="true"
-        >
-          <rect width="500" height="400" fill="#0a2f2c" />
-          <g>
-            <path d="M120 400 L180 120 L250 400 Z" fill="#1e8f77" />
-            <path d="M180 120 L250 400 L212 400 Z" fill="#43dcb4" opacity=".8" />
-            <path d="M230 400 L300 160 L380 400 Z" fill="#15705f" />
-            <path d="M300 160 L380 400 L332 400 Z" fill="#2fbf9c" opacity=".85" />
-            <path d="M60 400 L110 200 L170 400 Z" fill="#0f5045" />
-            <path d="M110 200 L170 400 L132 400 Z" fill="#27ae8d" opacity=".7" />
-            <path d="M340 400 L400 210 L470 400 Z" fill="#0f5a4c" />
-            <path d="M400 210 L470 400 L426 400 Z" fill="#38c9a4" opacity=".7" />
-          </g>
-          <g fill="#c8f5e8" opacity=".5">
-            <path d="M180 120 L192 162 L172 158 Z" />
-            <path d="M300 160 L312 198 L290 194 Z" />
-            <path d="M400 210 L410 242 L392 238 Z" />
-          </g>
-        </svg>
+        <img
+          className="pc-soon-bg"
+          src="/assets/hero-art.webp"
+          alt="Boca Raton Waterfront"
+        />
         <div className="pc-soon-scrim"></div>
         <div className="pc-soon-inner">
           <span className="pc-soon-badge">

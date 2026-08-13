@@ -10,6 +10,7 @@ import VenueView from "@/components/views/VenueView";
 import AgendaView from "@/components/views/AgendaView";
 import CompaniesView from "@/components/views/CompaniesView";
 import SpeakersView from "@/components/views/SpeakersView";
+import RegisterView from "@/components/views/RegisterView";
 
 export default function Page() {
   const [activeView, setActiveView] = useState("home");
@@ -17,7 +18,7 @@ export default function Page() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace("#", "");
-      if (["home", "about", "venue", "agenda", "companies", "speakers"].includes(hash)) {
+      if (["home", "about", "venue", "agenda", "companies", "speakers", "register"].includes(hash)) {
         setActiveView(hash);
       }
     };
@@ -47,6 +48,7 @@ export default function Page() {
         {activeView === "agenda" && <AgendaView onNavigate={handleNavigate} />}
         {activeView === "companies" && <CompaniesView onNavigate={handleNavigate} />}
         {activeView === "speakers" && <SpeakersView onNavigate={handleNavigate} />}
+        {activeView === "register" && <RegisterView onNavigate={handleNavigate} />}
       </main>
 
       <PartnerMarquee />

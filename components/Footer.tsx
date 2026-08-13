@@ -32,14 +32,9 @@ export default function Footer({ onNavigate }: FooterProps) {
             href="#home"
             onClick={(e) => handleNavClick("home", e)}
           >
-            <img
-              className="brand-mark"
-              src="/assets/brand-mark.webp"
-              alt="Noble"
-            />
-            <div className="brand-txt">
-              <b>NOBLE</b>
-              <span>MINING CONFERENCE</span>
+            <div className="noble-cm">
+              <img src="/assets/noble-cm.webp" alt="Noble Capital Markets" />
+              <span className="ncm-cap">NOBLE CAPITAL MARKETS</span>
             </div>
           </a>
           <p>
@@ -109,6 +104,13 @@ export default function Footer({ onNavigate }: FooterProps) {
             onClick={(e) => handleNavClick("speakers", e)}
           >
             Speakers
+          </a>
+          <a
+            className="lnk"
+            href="#register"
+            onClick={(e) => handleNavClick("register", e)}
+          >
+            Registration Portal
           </a>
         </div>
         <div>
