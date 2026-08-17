@@ -15,14 +15,6 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
 
   return (
     <div className="pview on" id="pv-about">
-      {/* BREADCRUMB */}
-      <div className="wrap crumbs">
-        <a href="#home" onClick={(e) => handleNavClick("home", e)}>
-          Home
-        </a>
-        <span className="sep">&rsaquo;</span>About
-      </div>
-
       {/* ABOUT HERO */}
       <section className="ab-hero">
         <img
@@ -39,7 +31,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
           </h1>
           <p className="dek">
             THE Noble Mining Investment Conference brings together global leaders,
-            innovators, and investors to shape a more sustainable and prosperous mining
+            innovators and investors to shape a more sustainable and prosperous mining
             industry.
           </p>
           <div className="hero-btns">
@@ -84,7 +76,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
         <div className="wrap collab-grid">
           <div className="collab-photo">
             <img
-              src="/assets/nobel-con.jpeg"
+              src="/assets/images (1).jpeg"
               alt="Noble Mining Conference Collaboration"
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             />
@@ -110,6 +102,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                 href="https://www.noblecon.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ whiteSpace: "nowrap" }}
               >
                 Noble Capital Markets
               </a>
@@ -117,7 +110,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             </p>
             <p>
               Over two days, the conference features up to 60 mining companies with
-              one-on-one meetings, presentations, and exceptional networking
+              one on one meetings, presentations and exceptional networking
               opportunities.
             </p>
             <div className="feat-list">
@@ -135,7 +128,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                     <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
                   </svg>
                 </span>
-                One-on-one investor meetings
+                One on one investor meetings
               </div>
               <div className="feat-li">
                 <span className="fi">
@@ -177,7 +170,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
       <section className="aud">
         <div className="wrap">
           <div className="aud-head">
-            <div className="eyebrow">WHO SHOULD ATTEND?</div>
+            <div className="eyebrow">WHO SHOULD ATTEND</div>
             <h2>Connect with the Right Audience</h2>
           </div>
           <div className="aud-grid">
@@ -196,7 +189,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                 </svg>
               </span>
               <b>Investors</b>
-              <p>Funds, family offices, HNWIs, and institutional investors.</p>
+              <p>Funds, family offices, HNWIs and institutional investors.</p>
             </div>
             <div className="aud-card">
               <span className="aud-ic">
@@ -242,7 +235,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                 </svg>
               </span>
               <b>Advisors</b>
-              <p>Legal, financial, and strategic advisors supporting the sector.</p>
+              <p>Legal, financial and strategic advisors supporting the sector.</p>
             </div>
             <div className="aud-card">
               <span className="aud-ic">
@@ -267,7 +260,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
       <section className="exp">
         <div className="wrap">
           <div className="exp-head">
-            <div className="eyebrow">WHY ATTEND?</div>
+            <div className="eyebrow">WHY ATTEND</div>
             <h2>A Premier Mining Investment Experience</h2>
           </div>
           <div className="exp-grid">
@@ -297,7 +290,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                 <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
               </svg>
               <b>Quality Connections</b>
-              <p>Pre-scheduled one-on-one meetings with active investors.</p>
+              <p>Pre-scheduled one on one meetings with active investors.</p>
             </div>
             <div className="exp-i">
               <svg
@@ -328,86 +321,6 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               <p>Unmatched networking opportunities including a gala event.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* HAVE QUESTIONS */}
-      <section className="quest">
-        <svg
-          className="quest-art"
-          viewBox="0 0 700 260"
-          preserveAspectRatio="xMidYMid slice"
-          aria-hidden="true"
-        >
-          <rect width="700" height="260" fill="#0d3040" />
-          <path d="M0 260 L0 190 Q160 150 320 176 Q500 205 700 168 L700 260 Z" fill="#0a4a58" />
-          <path d="M0 260 L0 216 Q180 186 360 206 Q540 226 700 200 L700 260 Z" fill="#0e5d68" />
-          <g fill="#f3cf8a" opacity=".8">
-            <rect x="120" y="196" width="4" height="6" />
-            <rect x="180" y="188" width="4" height="6" />
-            <rect x="240" y="192" width="4" height="6" />
-            <rect x="320" y="184" width="4" height="6" />
-            <rect x="400" y="192" width="4" height="6" />
-            <rect x="480" y="186" width="4" height="6" />
-            <rect x="560" y="180" width="4" height="6" />
-            <rect x="620" y="176" width="4" height="6" />
-          </g>
-          <path
-            d="M0 150 Q200 120 420 140 Q580 152 700 130 L700 172 Q520 200 340 178 Q160 160 0 192 Z"
-            fill="#e8d9b0"
-            opacity=".35"
-          />
-          <g fill="#0a2530">
-            <ellipse cx="160" cy="120" rx="40" ry="10" />
-            <ellipse cx="420" cy="98" rx="55" ry="12" />
-            <ellipse cx="600" cy="116" rx="44" ry="10" />
-          </g>
-        </svg>
-        <div className="quest-scrim"></div>
-        <div className="wrap quest-inner">
-          <div>
-            <h2>Have Questions?</h2>
-            <p className="qc">We're here to help you with any inquiries about the conference.</p>
-          </div>
-          <div className="q-item">
-            <span className="q-ic">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
-              </svg>
-            </span>
-            647-964-0292
-          </div>
-          <div className="q-item">
-            <span className="q-ic">
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.7" strokeLinejoin="round">
-                <rect x="3.5" y="5.5" width="17" height="13" rx="2" />
-                <path d="M4 7l8 6 8-6" />
-              </svg>
-            </span>
-            <a href="mailto:jchoi@irinc.ca" style={{ color: "#fff" }}>jchoi@irinc.ca</a>
-          </div>
-          <button
-            className="btn-ghost"
-            type="button"
-            onClick={() => alert("Contact form opening soon!")}
-          >
-            CONTACT US{" "}
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
-          </button>
         </div>
       </section>
     </div>

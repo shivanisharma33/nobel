@@ -7,22 +7,8 @@ interface SpeakersViewProps {
 }
 
 export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
-  const handleNavClick = (view: string, e: React.MouseEvent) => {
-    e.preventDefault();
-    onNavigate(view);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <div className="pview on" id="pv-speakers">
-      {/* BREADCRUMB */}
-      <div className="wrap crumbs">
-        <a href="#home" onClick={(e) => handleNavClick("home", e)}>
-          Home
-        </a>
-        <span className="sep">&rsaquo;</span>Speakers
-      </div>
-
       {/* HERO */}
       <section className="pc-hero">
         <img
@@ -38,14 +24,14 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
             <span className="gr">&amp; PRESENTERS</span>
           </h1>
           <p>
-            Hear from the industry leaders, investors, and visionaries shaping the
+            Hear from the industry leaders, investors and visionaries shaping the
             future of mining at THE Noble Mining Investment Conference.
           </p>
           <div className="hero-btns">
             <button
               className="btn-teal"
               type="button"
-              onClick={() => alert("Registration opening soon!")}
+              onClick={() => onNavigate("register")}
             >
               REGISTER TO STAY UPDATED{" "}
               <svg
@@ -251,7 +237,7 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
             <div className="eyebrow">GET INVOLVED</div>
             <h2>Interested in Speaking?</h2>
             <p>
-              If you'd like to be considered as a speaker or presenter, or to learn more
+              If you&apos;d like to be considered as a speaker or presenter, or to learn more
               about the program, please get in touch.
             </p>
           </div>

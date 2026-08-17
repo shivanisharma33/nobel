@@ -14,12 +14,6 @@ export default function AgendaView({ onNavigate }: AgendaViewProps) {
   const pdfFileUrl = "/assets/Noble-Mining-Conference-Agenda.pdf";
   const pdfFileName = "Noble-Mining-Conference-Agenda.pdf";
 
-  const handleNavClick = (view: string, e: React.MouseEvent) => {
-    e.preventDefault();
-    onNavigate(view);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const handleDownload = (e?: React.MouseEvent) => {
     if (e) e.preventDefault();
     const a = document.createElement("a");
@@ -48,14 +42,6 @@ export default function AgendaView({ onNavigate }: AgendaViewProps) {
 
   return (
     <div className="pview on" id="pv-agenda">
-      {/* BREADCRUMB */}
-      <div className="wrap crumbs">
-        <a href="#home" onClick={(e) => handleNavClick("home", e)}>
-          Home
-        </a>
-        <span className="sep">&rsaquo;</span>Agenda
-      </div>
-
       {/* HERO */}
       <section className="ag-hero">
         <img
@@ -66,12 +52,10 @@ export default function AgendaView({ onNavigate }: AgendaViewProps) {
         <div className="hero-scrim"></div>
         <div className="wrap ag-hero-inner">
           <h1>
-            THE
-            <br />
-            <span className="gr">AGENDA</span>
+            THE <span className="gr">AGENDA</span>
           </h1>
           <p>
-            Two days of high-impact presentations, one-on-one investor meetings, and
+            Two days of high-impact presentations, one on one investor meetings and
             exceptional networking — February 17–18, 2027.
           </p>
           <div className="hero-btns">

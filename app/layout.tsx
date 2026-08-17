@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "THE Noble Mining Investment Conference — February 17–18, 2027 · Boca Raton, Florida",
-  description: "Join decision makers, corporate executives, institutional investors, and high-net-worth individuals at THE Noble Mining Investment Conference in Boca Raton, Florida.",
+  description: "Join decision makers, corporate executives, institutional investors and high-net-worth individuals at THE Noble Mining Investment Conference in Boca Raton, Florida.",
 };
 
 export default function RootLayout({

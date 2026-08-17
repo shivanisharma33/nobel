@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 interface RegisterViewProps {
-  onNavigate: (view: string) => void;
+  onNavigate?: (view: string) => void;
 }
 
 export default function RegisterView({ onNavigate }: RegisterViewProps) {
@@ -44,12 +44,6 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
     updates: true,
   });
 
-  const handleNavClick = (view: string, e: React.MouseEvent) => {
-    e.preventDefault();
-    onNavigate(view);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const scrollToForm = (tab: "investor" | "company") => {
     setActiveTab(tab);
     setSubmitted(false);
@@ -73,14 +67,6 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
 
   return (
     <div className="pview on" id="pv-register">
-      {/* BREADCRUMB */}
-      <div className="wrap crumbs">
-        <a href="#home" onClick={(e) => handleNavClick("home", e)}>
-          Home
-        </a>
-        <span className="sep">&rsaquo;</span>Registration Portal
-      </div>
-
       {/* HERO */}
       <section className="reg-hero">
         <img
@@ -108,7 +94,7 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
             </div>
             <div className="reg-card-date">February 17–18, 2027</div>
             <p className="reg-card-sub">
-              THE Noble Mining Investment Conference: Invitation-only Tier 1 Conference for mining companies, accredited investors, family offices, institutions, and funds.
+              THE Noble Mining Investment Conference: Invitation-only Tier 1 Conference for mining companies, accredited investors, family offices, institutions and funds.
             </p>
           </div>
         </div>
@@ -132,12 +118,12 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
                 </div>
                 <h3>Investor Registration</h3>
                 <p>
-                  Register as an accredited investor, family office, institution, or fund to access privately arranged 1-on-1 meetings with leading mining companies.
+                  Register as an accredited investor, family office, institution or fund to access privately arranged 1 on 1 meetings with leading mining companies.
                 </p>
                 <div className="reg-feats">
                   <div className="reg-feat-item">
                     <span className="check-ic">✓</span>
-                    <span>1-on-1 Private Executive Meetings</span>
+                    <span>1 on 1 Private Executive Meetings</span>
                   </div>
                   <div className="reg-feat-item">
                     <span className="check-ic">✓</span>
@@ -167,7 +153,7 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
                 </div>
                 <h3>Company Registration</h3>
                 <p>
-                  Register your mining company to showcase your projects and connect with a curated audience of international investors, family offices, and funds.
+                  Register your mining company to showcase your projects and connect with a curated audience of international investors, family offices and funds.
                 </p>
                 <div className="reg-feats">
                   <div className="reg-feat-item">
@@ -232,13 +218,22 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
                 <p>
                   Thank you for submitting your application for THE Noble Mining Investment Conference. Our delegate relations team will review your details and contact you shortly with confirmation and schedule access.
                 </p>
-                <button
-                  type="button"
-                  className="btn-teal"
-                  onClick={() => setSubmitted(false)}
-                >
-                  Submit Another Registration
-                </button>
+                <div className="hero-btns" style={{ justifyContent: "center", marginTop: "24px" }}>
+                  <button
+                    type="button"
+                    className="btn-teal"
+                    onClick={() => setSubmitted(false)}
+                  >
+                    Submit Another Registration
+                  </button>
+                  <button
+                    type="button"
+                    className="btn-ghost"
+                    onClick={() => onNavigate?.("home")}
+                  >
+                    Return to Home
+                  </button>
+                </div>
               </div>
             ) : activeTab === "investor" ? (
               /* INVESTOR FORM */
@@ -559,7 +554,7 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
                     <textarea
                       rows={4}
                       maxLength={5000}
-                      placeholder="Briefly describe your mining assets and 1-on-1 meeting objectives..."
+                      placeholder="Briefly describe your mining assets and 1 on 1 meeting objectives..."
                       value={compForm.overview}
                       onChange={(e) => setCompForm({ ...compForm, overview: e.target.value })}
                     ></textarea>

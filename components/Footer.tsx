@@ -134,27 +134,6 @@ export default function Footer({ onNavigate }: FooterProps) {
             </li>
           </ul>
         </div>
-        <div className="ft-sub">
-          <h4>STAY INFORMED</h4>
-          <p>
-            Subscribe for conference updates, presenter announcements, and schedule
-            releases.
-          </p>
-          <form className="ft-form" onSubmit={handleSubscribe}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <button type="submit" aria-label="Subscribe">
-              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2.5" strokeLinecap="round">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </button>
-          </form>
-        </div>
       </div>
       <div className="ft-bottom">
         <div className="wrap ft-bottom-inner">

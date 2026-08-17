@@ -125,6 +125,11 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         <div className="hero-scrim"></div>
 
         <div className="wrap hero-inner">
+          <div className="hero-badge">
+            <span className="pulse-dot"></span>
+            <span>TIER 1 MINING INVESTMENT EVENT</span>
+          </div>
+
           <h1 id="heroTitle">
             THE NOBLE
             <br />
@@ -134,33 +139,46 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           </h1>
 
           <div className="hero-meta">
-            <div className="hm">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-              >
-                <path d="M12 21s-6.5-5.3-6.5-10A6.5 6.5 0 0 1 12 4.5 6.5 6.5 0 0 1 18.5 11c0 4.7-6.5 10-6.5 10z" />
-                <circle cx="12" cy="11" r="2.3" />
-              </svg>
-              <span>
-                The Boca Raton Innovation Campus,
-                <br />
-                Boca Raton, Florida
-              </span>
+            <div className="hm-card">
+              <div className="hm-icon-wrap">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 21s-6.5-5.3-6.5-10A6.5 6.5 0 0 1 12 4.5 6.5 6.5 0 0 1 18.5 11c0 4.7-6.5 10-6.5 10z" />
+                  <circle cx="12" cy="11" r="2.3" />
+                </svg>
+              </div>
+              <div className="hm-content">
+                <span className="hm-label">LOCATION & VENUE</span>
+                <span className="hm-title">The Boca Raton Innovation Campus</span>
+                <span className="hm-subtitle">Boca Raton, Florida</span>
+              </div>
             </div>
-            <div className="hm">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-              >
-                <rect x="4" y="5" width="16" height="15" rx="2" />
-                <path d="M4 9.5h16M8 3v4M16 3v4" />
-              </svg>
-              <span>February 17–18, 2027</span>
+
+            <div className="hm-card">
+              <div className="hm-icon-wrap">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="4" y="5" width="16" height="15" rx="2" />
+                  <path d="M4 9.5h16M8 3v4M16 3v4" />
+                </svg>
+              </div>
+              <div className="hm-content">
+                <span className="hm-label">EVENT DATES</span>
+                <span className="hm-title">February 17–18, 2027</span>
+                <span className="hm-badge-tag">2-Day Exclusive Conference</span>
+              </div>
             </div>
           </div>
 
@@ -267,22 +285,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 </svg>
               </div>
               <div className="stat-val">1 : 1</div>
-              <div className="stat-label">Investor Meetings</div>
-              <p>Pre-scheduled private 1-on-1 sessions</p>
-            </div>
-
-            <div className="stat-card">
-              <div className="stat-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round">
-                  <circle cx="12" cy="6" r="2.6" />
-                  <circle cx="6" cy="17" r="2.6" />
-                  <circle cx="18" cy="17" r="2.6" />
-                  <path d="M10.5 8l-3 6.5M13.5 8l3 6.5M8.6 17h6.8" />
-                </svg>
-              </div>
-              <div className="stat-val">Unmatched</div>
-              <div className="stat-label">Networking</div>
-              <p>Presentations, panels &amp; exclusive events</p>
+              <div className="stat-label">1 ON 1 MEETINGS</div>
+              <p>Pre-scheduled private 1 on 1 sessions</p>
             </div>
           </div>
         </div>
@@ -295,13 +299,14 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             <h2>ABOUT THE CONFERENCE</h2>
             <p>
               THE Noble Mining Investment Conference brings together global leaders,
-              innovators, and investors to shape a more sustainable and prosperous
+              innovators and investors to shape a more sustainable and prosperous
               mining industry.
             </p>
             <p>
-              Join us for two days of high-impact presentations, one-on-one meetings, and
-              exceptional networking opportunities—including a gala networking event on
-              February 17.
+              Join us for two days of high-impact presentations, one on one meetings and
+              exceptional networking opportunities
+              <br />
+              including a gala networking event on February 17.
             </p>
             <a
               className="btn-ghost"
@@ -323,7 +328,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           </div>
           <div className="aconf-photo">
             <img
-              src="/assets/nobel-con.jpeg"
+              src="/assets/images (1).jpeg"
               alt="The Boca Raton Innovation Campus - Noble Conference Venue"
             />
           </div>
@@ -338,7 +343,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               <span className="pill-dot"></span>
               VALUE PROPOSITION
             </span>
-            <h2 className="why-title">WHY ATTEND THE CONFERENCE?</h2>
+            <h2 className="why-title">WHY ATTEND THE CONFERENCE</h2>
           </div>
           <div className="why-grid">
             <div className="why-card">
@@ -395,7 +400,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 </svg>
               </div>
               <h3 className="why-card-title">INVEST</h3>
-              <p>Engage in pre-scheduled 1-on-1 private meetings with corporate leaders.</p>
+              <p>Engage in pre-scheduled 1 on 1 private meetings with corporate leaders.</p>
             </div>
 
             <div className="why-card">

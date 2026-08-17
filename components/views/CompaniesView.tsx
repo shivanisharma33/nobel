@@ -7,12 +7,6 @@ interface CompaniesViewProps {
 }
 
 export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
-  const handleNavClick = (view: string, e: React.MouseEvent) => {
-    e.preventDefault();
-    onNavigate(view);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const icons = [
     <path key="1" d="M4 21h16M6 21V8l4-3v16M14 21V10h4v11M9.5 9h.01M9.5 12h.01M9.5 15h.01" />,
     <path key="2" d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z" />,
@@ -25,14 +19,6 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
 
   return (
     <div className="pview on" id="pv-companies">
-      {/* BREADCRUMB */}
-      <div className="wrap crumbs">
-        <a href="#home" onClick={(e) => handleNavClick("home", e)}>
-          Home
-        </a>
-        <span className="sep">&rsaquo;</span>Participating Companies &amp; Sponsors
-      </div>
-
       {/* HERO */}
       <section className="pc-hero">
         <img
@@ -55,7 +41,7 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
             <button
               className="btn-teal"
               type="button"
-              onClick={() => alert("Registration opening soon!")}
+              onClick={() => onNavigate("register")}
             >
               REGISTER TO STAY UPDATED{" "}
               <svg

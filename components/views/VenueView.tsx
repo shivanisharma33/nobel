@@ -7,12 +7,6 @@ interface VenueViewProps {
 }
 
 export default function VenueView({ onNavigate }: VenueViewProps) {
-  const handleNavClick = (view: string, e: React.MouseEvent) => {
-    e.preventDefault();
-    onNavigate(view);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const hotels = [
     {
       name: "The Embassy Suites",
@@ -38,14 +32,6 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
 
   return (
     <div className="pview on" id="pv-venue">
-      {/* BREADCRUMB */}
-      <div className="wrap crumbs">
-        <a href="#home" onClick={(e) => handleNavClick("home", e)}>
-          Home
-        </a>
-        <span className="sep">&rsaquo;</span>Venue &amp; Accommodations
-      </div>
-
       {/* HERO */}
       <section className="vn-hero">
         <img
@@ -362,7 +348,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
             <b>BE PART OF THE EXPERIENCE</b>
             <p>
               Join industry leaders and investors for two days of high-impact
-              presentations, meetings, and networking in Boca Raton.
+              presentations, meetings and networking in Boca Raton.
             </p>
           </div>
           <button
