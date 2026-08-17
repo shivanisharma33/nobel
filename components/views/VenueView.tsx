@@ -11,7 +11,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
     {
       name: "The Embassy Suites",
       dist: "4.6 km",
-      image: "/assets/images (4).jpeg",
+      image: "/assets/Embassy_Suites__Gulf_Shores__Alabama__0992_1.webp",
     },
     {
       name: "Boca Raton Marriott",
@@ -26,7 +26,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
     {
       name: "The Boca Raton Resort",
       dist: "10 km",
-      image: "/assets/nobel-con.jpeg",
+      image: "/assets/images (3).jpeg",
     },
   ];
 
@@ -36,7 +36,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
       <section className="vn-hero">
         <img
           className="hero-art"
-          src="/assets/011-exterior-bric_1200xx1772-1331-228-0.jpg"
+          src="/assets/hero-art.webp"
           alt="Boca Raton Innovation Campus"
         />
         <div className="hero-scrim"></div>
@@ -223,7 +223,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
           <div className="gala-card">
             <div className="g-art">
               <img
-                src="/assets/1.jpeg"
+                src="/assets/images (3).jpeg"
                 alt="The Boca Raton Resort - Gala Venue"
                 style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", inset: 0 }}
               />
