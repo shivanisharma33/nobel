@@ -1342,8 +1342,10 @@ footer.site {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 76px;
-  padding: 0 24px;
+  height: 88px;
+  width: 220px;
+  flex: 0 0 220px;
+  padding: 0 16px;
   background: transparent;
   border: none;
   border-radius: 0;
@@ -1351,7 +1353,6 @@ footer.site {
   transition: transform 0.25s ease;
   cursor: pointer;
   position: relative;
-  flex: 0 0 auto;
 }
 
 .partner-card:hover {
@@ -1365,10 +1366,10 @@ footer.site {
 }
 
 .partner-logo-img {
-  max-height: 56px;
-  max-width: 230px;
+  height: 58px;
+  max-height: 58px;
+  max-width: 195px;
   width: auto;
-  height: auto;
   object-fit: contain;
   filter: none;
   display: block;

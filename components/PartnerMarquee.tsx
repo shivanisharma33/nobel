@@ -36,11 +36,11 @@ export default function PartnerMarquee() {
       id: "rctv",
       tag: "Broadcast Media",
       content: (
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <svg width="18" height="18" viewBox="0 0 18 18">
+        <div className="partner-logo-img" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+          <svg width="24" height="24" viewBox="0 0 18 18">
             <circle cx="9" cy="9" r="8" fill="#e8442c" />
           </svg>
-          <span style={{ letterSpacing: ".14em", fontWeight: 800, color: "#10262c", fontSize: "19px" }}>RCTV</span>
+          <span style={{ letterSpacing: ".14em", fontWeight: 800, color: "#10262c", fontSize: "26px", lineHeight: 1 }}>RCTV</span>
         </div>
       ),
     },
