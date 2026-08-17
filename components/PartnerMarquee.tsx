@@ -159,7 +159,7 @@ export default function PartnerMarquee() {
             FEATURED MEDIA &amp; <span className="highlight">INDUSTRY PARTNERS</span>
           </h2>
           <p className="partners-subtitle">
-            Supported by leading stock exchanges, investment banks, capital market advisors and global mining media networks.
+            Supported by leading stock exchanges, investment banks, capital market advisors and<br />global mining media networks.
           </p>
         </div>
 

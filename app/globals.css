@@ -579,17 +579,26 @@ nav.main a.active {
   color: #8fa8ad;
 }
 
-.hdr .noble-cm {
+.hdr .noble-cm,
+.ft .noble-cm,
+.ft-brand .noble-cm,
+footer .noble-cm {
   gap: 3px;
   align-items: flex-start;
 }
 
-.hdr .noble-cm img {
+.hdr .noble-cm img,
+.ft .noble-cm img,
+.ft-brand .noble-cm img,
+footer .noble-cm img {
   height: 32px;
   width: auto;
 }
 
-.hdr .ncm-cap {
+.hdr .ncm-cap,
+.ft .ncm-cap,
+.ft-brand .ncm-cap,
+footer .ncm-cap {
   font-size: 8px;
   letter-spacing: .18em;
   line-height: 1;
@@ -2060,6 +2069,7 @@ footer.site {
   color: #fff;
   line-height: 1.1;
   margin-bottom: 18px;
+  white-space: nowrap;
 }
 
 .pc-soon h2 .gr {
@@ -2073,7 +2083,7 @@ footer.site {
   font-size: 15px;
   color: #cfe6e0;
   line-height: 1.8;
-  max-width: 500px;
+  max-width: 720px;
   margin: 0 auto 30px;
 }
 

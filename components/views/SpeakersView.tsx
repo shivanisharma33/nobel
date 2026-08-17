@@ -71,11 +71,13 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
             LINEUP IN PROGRESS
           </span>
           <h2>
-            Speakers <span className="gr">Coming Soon</span>
+            <span style={{ whiteSpace: "nowrap" }}>
+              Speakers <span className="gr">Coming Soon</span>
+            </span>
           </h2>
           <p>
-            Our speaker and presenter lineup is being finalized. Register your interest
-            to be the first to know as keynotes and presenters are confirmed.
+            Our speaker and presenter lineup is being finalized.<br />
+            Register your interest to be the first to know as keynotes and presenters are confirmed.
           </p>
           <div className="pc-soon-btns">
             <button

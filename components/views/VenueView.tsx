@@ -12,21 +12,25 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
       name: "The Embassy Suites",
       dist: "4.6 km",
       image: "/assets/Embassy_Suites__Gulf_Shores__Alabama__0992_1.webp",
+      link: "https://www.hilton.com/en/brands/embassy-suites/",
     },
     {
       name: "Boca Raton Marriott",
       dist: "6 km",
       image: "/assets/1.jpeg",
+      link: "https://www.marriott.com/en-us/hotels/pbibr-boca-raton-marriott-at-boca-center/overview/",
     },
     {
       name: "Hyatt Place Boca Raton",
       dist: "8 km",
       image: "/assets/images (2).jpeg",
+      link: "https://www.hyatt.com/hyatt-place/en-US/fllzb-hyatt-place-boca-raton-downtown",
     },
     {
       name: "The Boca Raton Resort",
       dist: "10 km",
       image: "/assets/images (3).jpeg",
+      link: "https://www.thebocaraton.com/",
     },
   ];
 
@@ -295,8 +299,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
                   <b>{h.name}</b>
                   <a
                     className="btn-hotel"
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
+                    href={h.link}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
