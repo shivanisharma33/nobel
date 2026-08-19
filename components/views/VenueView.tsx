@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import PartnerMarquee from "@/components/PartnerMarquee";
 
 interface VenueViewProps {
   onNavigate: (view: string) => void;
@@ -8,6 +9,12 @@ interface VenueViewProps {
 
 export default function VenueView({ onNavigate }: VenueViewProps) {
   const hotels = [
+    {
+      name: "Waterstone Resort & Marina Boca Raton",
+      dist: "Curio Collection by Hilton",
+      image: "/assets/images (3).jpeg",
+      link: "https://www.hilton.com/en/hotels/bctbuqq-waterstone-resort-and-marina-boca-raton/?WT.mc_id=zLADA0AA1QQ2PSH3GGL4AMPHTBRD_Oct5GNPLTPMWBRNLAB6BCTBUQQ7EN8i142435__z22150162559z__&gclsrc=aw.ds&&utm_campaign=%7Bcampaign%7D&utm_adgroup=%7Badgroup%7D&utm_keyword=waterstone%20resort%20%26%20marina%20boca%20raton%20curio%20collection%20by%20hilton&gad_source=1&gad_campaignid=22150162559&gbraid=0AAAAA-Q0XEbzEk5RoeOwx95koEJq-JLh_&gclid=EAIaIQobChMIqrPw7f-nlgMVuIDCCB10DwkMEAAYASAAEgJBevD_BwE",
+    },
     {
       name: "The Embassy Suites",
       dist: "4.6 km",
@@ -25,12 +32,6 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
       dist: "8 km",
       image: "/assets/images (2).jpeg",
       link: "https://www.hyatt.com/hyatt-place/en-US/fllzb-hyatt-place-boca-raton-downtown",
-    },
-    {
-      name: "The Boca Raton Resort",
-      dist: "10 km",
-      image: "/assets/images (3).jpeg",
-      link: "https://www.thebocaraton.com/",
     },
   ];
 
@@ -56,6 +57,8 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
           </p>
         </div>
       </section>
+
+      <PartnerMarquee />
 
       {/* FACT CARD */}
       <section className="vn-facts">
@@ -119,10 +122,8 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
               <div>
                 <b>GALA NETWORKING EVENT – FEB 17</b>
                 <p>
-                  The Boca Raton Resort
+                  Kasumi
                   <small>
-                    501 East Camino Real,
-                    <br />
                     Boca Raton, Florida
                   </small>
                 </p>
@@ -136,11 +137,11 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
       <section className="aboutv">
         <div className="wrap aboutv-grid">
           <div>
-            <div className="eyebrow">ABOUT THE VENUE</div>
+            <div className="eyebrow">ABOUT THE&nbsp;VENUE</div>
             <h2>
               Boca Raton
               <br />
-              Innovation Campus
+              Innovation&nbsp;Campus
             </h2>
             <p className="vp">
               Originally built by IBM in the late 1960s as its North American R&amp;D
@@ -227,14 +228,14 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
           <div className="gala-card">
             <div className="g-art">
               <img
-                src="/assets/images (3).jpeg"
-                alt="The Boca Raton Resort - Gala Venue"
+                src="/assets/kasumi.png"
+                alt="Kasumi - Gala Venue"
                 style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", inset: 0 }}
               />
             </div>
             <div className="gala-body">
               <div className="eyebrow">GALA VENUE</div>
-              <h2>The Boca Raton Resort</h2>
+              <h2>Kasumi</h2>
               <div className="gv-row">
                 <svg
                   viewBox="0 0 24 24"
@@ -246,8 +247,6 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
                   <circle cx="12" cy="11" r="2.3" />
                 </svg>
                 <span>
-                  501 East Camino Real,
-                  <br />
                   Boca Raton, Florida
                 </span>
               </div>
@@ -263,9 +262,22 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
                   <circle cx="15.5" cy="15" r="3" />
                 </svg>
                 <span>
-                  Join us for an exclusive gala networking event on February 17 at this
-                  iconic oceanfront resort.
+                  Join us for an exclusive gala networking event on February 17 at Kasumi.
                 </span>
+              </div>
+              <div style={{ marginTop: "20px" }}>
+                <a
+                  href="https://www.kasumiboca.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-teal"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}
+                >
+                  <span>VISIT KASUMI WEBSITE</span>
+                  <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "16px", height: "16px" }}>
+                    <path d="M14 4h6v6M20 4l-8 8M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -277,7 +289,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
         <div className="wrap">
           <div className="hotels-head">
             <div className="eyebrow">ACCOMMODATIONS</div>
-            <h2>Recommended Hotels Near the Venue</h2>
+            <h2>Recommended Hotels Near the&nbsp;Venue</h2>
             <p>
               We are pleased to recommend the following hotels near the Boca Raton
               Innovation Campus.
@@ -303,7 +315,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    VISIT WEBSITE{" "}
+                    VISIT&nbsp;WEBSITE{" "}
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -359,7 +371,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
             type="button"
             onClick={() => onNavigate("register")}
           >
-            REGISTER HERE{" "}
+            REGISTER&nbsp;HERE{" "}
             <svg
               viewBox="0 0 24 24"
               fill="none"

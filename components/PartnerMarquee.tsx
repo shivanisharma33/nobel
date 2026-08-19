@@ -17,7 +17,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/logo-miningir.png"
           alt="Mining IR"
-          className="partner-logo-img"
+          className="partner-logo-img logo-mining-ir"
         />
       ),
     },
@@ -28,7 +28,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/mining-discovery.png"
           alt="Mining Discovery"
-          className="partner-logo-img"
+          className="partner-logo-img logo-mining-discovery"
         />
       ),
     },
@@ -36,11 +36,11 @@ export default function PartnerMarquee() {
       id: "rctv",
       tag: "Broadcast Media",
       content: (
-        <div className="partner-logo-img" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+        <div className="partner-logo-img rctv-logo-box logo-rctv">
           <svg width="24" height="24" viewBox="0 0 18 18">
             <circle cx="9" cy="9" r="8" fill="#e8442c" />
           </svg>
-          <span style={{ letterSpacing: ".14em", fontWeight: 800, color: "#10262c", fontSize: "26px", lineHeight: 1 }}>RCTV</span>
+          <span>RCTV</span>
         </div>
       ),
     },
@@ -51,7 +51,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/logo.webp"
           alt="VID"
-          className="partner-logo-img"
+          className="partner-logo-img logo-vid"
         />
       ),
     },
@@ -62,7 +62,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/the-money-channel.jpg"
           alt="The Money Channel New York City"
-          className="partner-logo-img"
+          className="partner-logo-img logo-money-channel"
         />
       ),
     },
@@ -73,7 +73,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/04-TMX.png"
           alt="TMX Group"
-          className="partner-logo-img"
+          className="partner-logo-img logo-tmx"
         />
       ),
     },
@@ -84,7 +84,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/stifel-logo-resized.jpg"
           alt="Stifel"
-          className="partner-logo-img"
+          className="partner-logo-img logo-stifel"
         />
       ),
     },
@@ -95,7 +95,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/CSE-Logo-RGB.webp"
           alt="Canadian Securities Exchange"
-          className="partner-logo-img"
+          className="partner-logo-img logo-cse"
         />
       ),
     },
@@ -106,7 +106,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/maxit_st_cmyk_lg.webp"
           alt="Maxit Capital"
-          className="partner-logo-img"
+          className="partner-logo-img logo-maxit"
         />
       ),
     },
@@ -117,7 +117,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/logo.png"
           alt="Altitude Capital Partners"
-          className="partner-logo-img"
+          className="partner-logo-img logo-altitude"
         />
       ),
     },
@@ -128,7 +128,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/Ventum_Financial_RGB.webp"
           alt="Ventum Capital Markets"
-          className="partner-logo-img"
+          className="partner-logo-img logo-ventum"
         />
       ),
     },
@@ -139,7 +139,7 @@ export default function PartnerMarquee() {
         <img
           src="/assets/image (2).webp"
           alt="Red Cloud Securities"
-          className="partner-logo-img"
+          className="partner-logo-img logo-red-cloud"
         />
       ),
     },
@@ -151,10 +151,6 @@ export default function PartnerMarquee() {
     <section className="partners-band" aria-label="Featured Media and Industry Partners">
       <div className="wrap">
         <div className="partners-header">
-          <div className="partners-badge">
-            <span className="partners-badge-dot"></span>
-            Global Network &amp; Ecosystem
-          </div>
           <h2 className="partners-title">
             FEATURED MEDIA &amp; <span className="highlight">INDUSTRY PARTNERS</span>
           </h2>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import PartnerMarquee from "@/components/PartnerMarquee";
 
 interface AgendaViewProps {
   onNavigate: (view: string) => void;
@@ -73,14 +74,14 @@ export default function AgendaView({ onNavigate }: AgendaViewProps) {
               >
                 <path d="M12 4v11M7.5 11.5L12 16l4.5-4.5M5 19.5h14" />
               </svg>{" "}
-              DOWNLOAD AGENDA
+              DOWNLOAD&nbsp;AGENDA
             </button>
             <button
               className="btn-ghost"
               type="button"
               onClick={() => onNavigate("register")}
             >
-              REGISTER HERE{" "}
+              REGISTER&nbsp;HERE{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -95,12 +96,14 @@ export default function AgendaView({ onNavigate }: AgendaViewProps) {
         </div>
       </section>
 
+      <PartnerMarquee />
+
       {/* PDF VIEWER */}
       <section className="ag-pdf" id="agPdf">
         <div className="wrap">
           <div className="agp-head">
-            <div className="eyebrow">CONFERENCE SCHEDULE</div>
-            <h2>Full Agenda</h2>
+            <div className="eyebrow">CONFERENCE&nbsp;SCHEDULE</div>
+            <h2>Full&nbsp;Agenda</h2>
           </div>
           <p className="agp-note">
             Browse the preliminary two-day conference schedule below. Sessions and
@@ -196,7 +199,7 @@ export default function AgendaView({ onNavigate }: AgendaViewProps) {
                   </svg>
                 </button>
                 <button className="pdfv-dl" id="agDl" onClick={handleDownload}>
-                  DOWNLOAD PDF{" "}
+                  DOWNLOAD&nbsp;PDF{" "}
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -236,7 +239,7 @@ export default function AgendaView({ onNavigate }: AgendaViewProps) {
               </svg>
             </div>
             <div className="ag-plan-copy">
-              <b>Plan Your Conference Experience</b>
+              <b>Plan Your Conference&nbsp;Experience</b>
               <p>
                 Register to receive agenda updates and secure your spot at THE Noble
                 Mining Investment Conference.
@@ -247,7 +250,7 @@ export default function AgendaView({ onNavigate }: AgendaViewProps) {
               type="button"
               onClick={() => alert("Registration opening soon!")}
             >
-              REGISTER HERE{" "}
+              REGISTER&nbsp;HERE{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"

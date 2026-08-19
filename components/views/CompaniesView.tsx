@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import PartnerMarquee from "@/components/PartnerMarquee";
 
 interface CompaniesViewProps {
   onNavigate: (view: string) => void;
@@ -43,7 +44,7 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
               type="button"
               onClick={() => onNavigate("register")}
             >
-              REGISTER TO STAY UPDATED{" "}
+              REGISTER TO STAY&nbsp;UPDATED{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -57,6 +58,8 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
           </div>
         </div>
       </section>
+
+      <PartnerMarquee />
 
       {/* COMING SOON CENTERPIECE */}
       <section className="pc-soon">
@@ -93,7 +96,7 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
               type="button"
               onClick={() => alert("Registration opening soon!")}
             >
-              REGISTER TO STAY UPDATED{" "}
+              REGISTER TO STAY&nbsp;UPDATED{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -109,98 +112,8 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
               type="button"
               onClick={() => alert("Contact form opening soon!")}
             >
-              CONTACT US
+              CONTACT&nbsp;US
             </button>
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT TO EXPECT */}
-      <section className="pc-expect">
-        <div className="wrap">
-          <div className="pc-expect-head">
-            <div className="eyebrow">WHAT TO EXPECT</div>
-            <h2>A Curated Investment Lineup</h2>
-          </div>
-          <div className="pc-expect-grid">
-            <div className="pce">
-              <span className="pce-ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M4 21h16M6 21V8l4-3v16M14 21V10h4v11M9.5 9h.01M9.5 12h.01M9.5 15h.01" />
-                </svg>
-              </span>
-              <b>
-                Up to 60
-                <br />
-                Mining Companies
-              </b>
-              <p>Presenting and meeting with active investors across two days.</p>
-            </div>
-            <div className="pce">
-              <span className="pce-ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5-5-2.6-5 2.6 1-5.5-4-3.9 5.5-.8z" />
-                </svg>
-              </span>
-              <b>
-                Global
-                <br />
-                Sponsors
-              </b>
-              <p>Industry partners supporting the conference across the value chain.</p>
-            </div>
-            <div className="pce">
-              <span className="pce-ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M8.5 12.5L5 9.5 8 6l4 1.5L16 6l3 3.5-3.5 3M8.5 12.5l3.5 3.4 3.5-3.4M8.5 12.5L11 15M15.5 12.5L13 15" />
-                </svg>
-              </span>
-              <b>
-                1:1 Investor
-                <br />
-                Access
-              </b>
-              <p>Pre-scheduled meetings with funds, family offices and HNWIs.</p>
-            </div>
-            <div className="pce">
-              <span className="pce-ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                >
-                  <circle cx="12" cy="6" r="2.6" />
-                  <circle cx="6" cy="17" r="2.6" />
-                  <circle cx="18" cy="17" r="2.6" />
-                  <path d="M10.5 8l-3 6.5M13.5 8l3 6.5M8.6 17h6.8" />
-                </svg>
-              </span>
-              <b>
-                Gala
-                <br />
-                Networking
-              </b>
-              <p>Exclusive networking including the February 17 gala event.</p>
-            </div>
           </div>
         </div>
       </section>
@@ -209,8 +122,8 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
       <section className="pc-roster">
         <div className="wrap">
           <div className="pc-roster-head">
-            <div className="eyebrow">THE LINEUP</div>
-            <h2>Companies &amp; Sponsors</h2>
+            <div className="eyebrow">THE&nbsp;LINEUP</div>
+            <h2>Companies &amp;&nbsp;Sponsors</h2>
           </div>
           <p className="pc-roster-note">
             Participating company and sponsor announcements will appear here as they are
@@ -241,8 +154,8 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
       <section className="pc-cta">
         <div className="pc-cta-band">
           <div className="pc-cta-copy">
-            <div className="eyebrow">GET INVOLVED</div>
-            <h2>Interested in Participating or Sponsoring?</h2>
+            <div className="eyebrow">GET&nbsp;INVOLVED</div>
+            <h2>Interested in Participating or&nbsp;Sponsoring?</h2>
             <p>
               Mining companies and prospective sponsors are welcome to get in touch.
               Register on this website or contact us directly for more information.

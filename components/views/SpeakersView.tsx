@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import PartnerMarquee from "@/components/PartnerMarquee";
 
 interface SpeakersViewProps {
   onNavigate: (view: string) => void;
@@ -33,7 +34,7 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
               type="button"
               onClick={() => onNavigate("register")}
             >
-              REGISTER TO STAY UPDATED{" "}
+              REGISTER TO STAY&nbsp;UPDATED{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -47,6 +48,8 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
           </div>
         </div>
       </section>
+
+      <PartnerMarquee />
 
       {/* COMING SOON CENTERPIECE */}
       <section className="pc-soon">
@@ -85,7 +88,7 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
               type="button"
               onClick={() => alert("Registration opening soon!")}
             >
-              REGISTER TO STAY UPDATED{" "}
+              REGISTER TO STAY&nbsp;UPDATED{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -101,102 +104,8 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
               type="button"
               onClick={() => alert("Contact form opening soon!")}
             >
-              CONTACT US
+              CONTACT&nbsp;US
             </button>
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT TO EXPECT */}
-      <section className="pc-expect">
-        <div className="wrap">
-          <div className="pc-expect-head">
-            <div className="eyebrow">WHAT TO EXPECT</div>
-            <h2>Insight from Industry Leaders</h2>
-          </div>
-          <div className="pc-expect-grid">
-            <div className="pce">
-              <span className="pce-ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M9 18V5l12-2v13" />
-                  <circle cx="6" cy="18" r="3" />
-                  <circle cx="18" cy="16" r="3" />
-                </svg>
-              </span>
-              <b>
-                Keynote
-                <br />
-                Speakers
-              </b>
-              <p>Industry leaders opening each day with keynote addresses.</p>
-            </div>
-            <div className="pce">
-              <span className="pce-ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="4" y="4" width="16" height="12" rx="2" />
-                  <path d="M9 20h6M12 16v4M8 11l2.5-3 2 2 3.5-4.5" />
-                </svg>
-              </span>
-              <b>
-                Company
-                <br />
-                Presentations
-              </b>
-              <p>Up to 60 mining companies presenting to active investors.</p>
-            </div>
-            <div className="pce">
-              <span className="pce-ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                >
-                  <circle cx="7" cy="9" r="2.4" />
-                  <circle cx="17" cy="9" r="2.4" />
-                  <path d="M3 18c.4-2.4 2-3.6 4-3.6S10.6 15.6 11 18M13 18c.4-2.4 2-3.6 4-3.6S20.6 15.6 21 18" />
-                </svg>
-              </span>
-              <b>
-                Panel
-                <br />
-                Discussions
-              </b>
-              <p>Expert panels exploring market trends and opportunities.</p>
-            </div>
-            <div className="pce">
-              <span className="pce-ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                >
-                  <circle cx="12" cy="6" r="2.6" />
-                  <circle cx="6" cy="17" r="2.6" />
-                  <circle cx="18" cy="17" r="2.6" />
-                  <path d="M10.5 8l-3 6.5M13.5 8l3 6.5M8.6 17h6.8" />
-                </svg>
-              </span>
-              <b>
-                Investor
-                <br />
-                Networking
-              </b>
-              <p>Connect directly with speakers and presenters between sessions.</p>
-            </div>
           </div>
         </div>
       </section>
@@ -205,8 +114,8 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
       <section className="pc-roster">
         <div className="wrap">
           <div className="pc-roster-head">
-            <div className="eyebrow">THE LINEUP</div>
-            <h2>Featured Speakers</h2>
+            <div className="eyebrow">THE&nbsp;LINEUP</div>
+            <h2>Featured&nbsp;Speakers</h2>
           </div>
           <p className="pc-roster-note">
             Speaker and presenter announcements will appear here as they are confirmed.
@@ -236,8 +145,8 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
       <section className="pc-cta">
         <div className="pc-cta-band">
           <div className="pc-cta-copy">
-            <div className="eyebrow">GET INVOLVED</div>
-            <h2>Interested in Speaking?</h2>
+            <div className="eyebrow">GET&nbsp;INVOLVED</div>
+            <h2>Interested in&nbsp;Speaking?</h2>
             <p>
               If you&apos;d like to be considered as a speaker or presenter, or to learn more
               about the program, please get in touch.

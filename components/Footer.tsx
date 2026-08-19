@@ -38,7 +38,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </div>
           </a>
           <p>
-            Connecting resource companies with institutional investors, analysts,
+            Connecting resource companies with institutional investors, analysts
             and high-net-worth individuals.
           </p>
           <div className="ft-social">
@@ -118,12 +118,17 @@ export default function Footer({ onNavigate }: FooterProps) {
           <ul className="ft-contact">
             <li>
               <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              <span>Jenny Choi</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <path d="M22 6l-10 7L2 6" />
               </svg>
-              <a href="mailto:mininginfo@noblecapitalmarkets.com">
-                mininginfo@noblecapitalmarkets.com
-              </a>
+              <a href="mailto:jchoi@irinc.ca">jchoi@irinc.ca</a>
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" strokeWidth="2">

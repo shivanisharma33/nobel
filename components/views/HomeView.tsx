@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import PartnerMarquee from "@/components/PartnerMarquee";
 
 interface HomeViewProps {
   onNavigate: (view: string) => void;
@@ -127,7 +127,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         <div className="wrap hero-inner">
           <div className="hero-badge">
             <span className="pulse-dot"></span>
-            <span>TIER 1 MINING INVESTMENT EVENT</span>
+            <span>TIER 1 MINING INVESTMENT&nbsp;EVENT</span>
           </div>
 
           <h1 id="heroTitle">
@@ -177,7 +177,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               <div className="hm-content">
                 <span className="hm-label">EVENT DATES</span>
                 <span className="hm-title">February 17–18, 2027</span>
-                <span className="hm-badge-tag">2-Day Exclusive Conference</span>
+                <span className="hm-badge-tag">2-Day Exclusive&nbsp;Conference</span>
               </div>
             </div>
           </div>
@@ -188,7 +188,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               href="#contact"
               onClick={(e) => handleNavClick("about", e)}
             >
-              REGISTER HERE{" "}
+              REGISTER&nbsp;HERE{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -204,7 +204,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               href="#agenda"
               onClick={(e) => handleNavClick("agenda", e)}
             >
-              VIEW AGENDA
+              VIEW&nbsp;AGENDA
             </a>
           </div>
 
@@ -216,13 +216,15 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </span>
 
             <img
-              className="hero-partner-logo"
-              src="/assets/MainPageLogo.webp"
-              alt="Conference Logo"
+              className="hero-partner-logo global-events-hero-logo"
+              src="/assets/global-events-logo.png"
+              alt="Global Events Logo"
             />
           </div>
         </div>
       </section>
+
+      <PartnerMarquee />
 
       {/* ================= STATS / PREMIER EXPERIENCE ================= */}
       <section className="stats" id="stats">
@@ -232,7 +234,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               <span className="pill-dot"></span>
               EVENT HIGHLIGHTS
             </span>
-            <h2 className="stats-title">A PREMIER MINING INVESTMENT EXPERIENCE</h2>
+            <h2 className="stats-title">A PREMIER MINING INVESTMENT&nbsp;EXPERIENCE</h2>
           </div>
           <div className="stats-grid">
             <div className="stat-card">
@@ -285,7 +287,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 </svg>
               </div>
               <div className="stat-val">1 : 1</div>
-              <div className="stat-label">1 ON 1 MEETINGS</div>
+              <div className="stat-label">1 ON 1&nbsp;MEETINGS</div>
               <p>Pre-scheduled private 1 on 1 sessions</p>
             </div>
           </div>
@@ -296,7 +298,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       <section className="aconf" id="aboutconf">
         <div className="wrap aconf-grid">
           <div>
-            <h2>ABOUT THE CONFERENCE</h2>
+            <h2>ABOUT THE&nbsp;CONFERENCE</h2>
             <p>
               THE Noble Mining Investment Conference brings together global leaders,
               innovators and investors to shape a more sustainable and prosperous
@@ -314,7 +316,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               onClick={(e) => handleNavClick("about", e)}
               style={{ marginTop: "8px" }}
             >
-              LEARN MORE ABOUT THE CONFERENCE{" "}
+              LEARN MORE ABOUT THE&nbsp;CONFERENCE{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -343,7 +345,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               <span className="pill-dot"></span>
               VALUE PROPOSITION
             </span>
-            <h2 className="why-title">WHY ATTEND THE CONFERENCE</h2>
+            <h2 className="why-title">WHY ATTEND THE&nbsp;CONFERENCE</h2>
           </div>
           <div className="why-grid">
             <div className="why-card">
@@ -439,15 +441,15 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </svg>
           </span>
           <div className="coming-copy">
-            <div className="eyebrow">PARTICIPATING COMPANIES &amp; SPONSORS</div>
-            <h2>COMING SOON</h2>
-            <p>Participating companies and sponsors will be announced soon. Stay tuned!</p>
+            <div className="eyebrow">PARTICIPATING COMPANIES &amp;&nbsp;SPONSORS</div>
+            <h2>COMING&nbsp;SOON</h2>
+            <p>Participating companies and sponsors will be announced soon. Stay&nbsp;tuned!</p>
             <button
               className="btn-ghost"
               type="button"
               onClick={() => onNavigate("register")}
             >
-              REGISTER TO STAY UPDATED{" "}
+              REGISTER TO STAY&nbsp;UPDATED{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"

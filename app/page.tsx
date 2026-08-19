@@ -18,7 +18,7 @@ export default function Page() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace("#", "");
-      if (["home", "about", "venue", "agenda", "companies", "speakers", "register"].includes(hash)) {
+      if (["home", "about", "venue", "agenda", "companies", "speakers", "register", "register-investor", "register-company"].includes(hash)) {
         setActiveView(hash);
       }
     };
@@ -48,10 +48,11 @@ export default function Page() {
         {activeView === "agenda" && <AgendaView onNavigate={handleNavigate} />}
         {activeView === "companies" && <CompaniesView onNavigate={handleNavigate} />}
         {activeView === "speakers" && <SpeakersView onNavigate={handleNavigate} />}
-        {activeView === "register" && <RegisterView onNavigate={handleNavigate} />}
+        {activeView === "register" && <RegisterView onNavigate={handleNavigate} mode="tracks" />}
+        {activeView === "register-investor" && <RegisterView onNavigate={handleNavigate} mode="form" initialTab="investor" />}
+        {activeView === "register-company" && <RegisterView onNavigate={handleNavigate} mode="form" initialTab="company" />}
       </main>
 
-      <PartnerMarquee />
       <Footer onNavigate={handleNavigate} />
     </>
   );

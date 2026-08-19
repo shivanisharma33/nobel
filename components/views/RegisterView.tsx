@@ -1,15 +1,28 @@
 "use client";
 
 import React, { useState } from "react";
+import PartnerMarquee from "@/components/PartnerMarquee";
 
 interface RegisterViewProps {
   onNavigate?: (view: string) => void;
+  initialTab?: "investor" | "company";
+  mode?: "tracks" | "form";
 }
 
-export default function RegisterView({ onNavigate }: RegisterViewProps) {
-  const [activeTab, setActiveTab] = useState<"investor" | "company">("investor");
+export default function RegisterView({
+  onNavigate,
+  initialTab = "investor",
+  mode = "form",
+}: RegisterViewProps) {
+  const [activeTab, setActiveTab] = useState<"investor" | "company">(initialTab);
   const [submitted, setSubmitted] = useState(false);
   const [submittedType, setSubmittedType] = useState("");
+
+  React.useEffect(() => {
+    if (initialTab) {
+      setActiveTab(initialTab);
+    }
+  }, [initialTab]);
 
   // Investor form state
   const [invForm, setInvForm] = useState({
@@ -44,13 +57,13 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
     updates: true,
   });
 
-  const scrollToForm = (tab: "investor" | "company") => {
+  const handleOpenForm = (tab: "investor" | "company") => {
     setActiveTab(tab);
     setSubmitted(false);
-    const formSec = document.getElementById("registration-form-section");
-    if (formSec) {
-      formSec.scrollIntoView({ behavior: "smooth" });
+    if (onNavigate) {
+      onNavigate(tab === "investor" ? "register-investor" : "register-company");
     }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleInvestorSubmit = (e: React.FormEvent) => {
@@ -65,126 +78,185 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
     setSubmitted(true);
   };
 
+  // MODE 1: TRACK SELECTION OVERVIEW PAGE
+  if (mode === "tracks") {
+    return (
+      <div className="pview on" id="pv-register">
+        {/* HERO */}
+        <section className="reg-hero">
+          <img
+            className="hero-art"
+            src="/assets/hero-art.webp"
+            alt="Registration Background"
+          />
+          <div className="hero-scrim"></div>
+          <div className="wrap reg-hero-inner">
+            <div className="reg-hero-left">
+              <span className="reg-badge">SAVE THE DATE — INVITATION&nbsp;ONLY</span>
+              <h1>
+                REGISTRATION <br />
+                <span className="gr">PORTAL</span>
+              </h1>
+              <div className="reg-bar"></div>
+            </div>
+            <div className="reg-event-card">
+              <div className="reg-card-loc">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                <span>Boca Raton Innovation Campus, Florida</span>
+              </div>
+              <div className="reg-card-date">February 17–18, 2027</div>
+              <p className="reg-card-sub">
+                THE Noble Mining Investment Conference: Invitation-only Tier 1 Conference for mining companies, accredited investors, family offices, institutions and funds.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <PartnerMarquee />
+
+        {/* TRACK SELECTION CARDS */}
+        <section className="reg-tracks">
+          <div className="wrap">
+            <div className="reg-tracks-head">
+              <span className="eyebrow">CHOOSE YOUR PARTICIPATION&nbsp;TRACK</span>
+              <h2>Tailored Access for Investors &amp;&nbsp;Companies</h2>
+              <div className="reg-div-line"></div>
+            </div>
+            <div className="reg-track-grid">
+              {/* TRACK 1: INVESTOR */}
+              <div className="reg-track-card active">
+                <div className="reg-track-top">
+                  <div className="reg-track-meta">
+                    <span className="reg-tag">FOR INVESTORS</span>
+                    <span className="reg-num">01</span>
+                  </div>
+                  <h3>Investor Registration</h3>
+                  <p>
+                    Register as an accredited investor, family office, institution or fund to access privately arranged 1 on 1 meetings with leading mining companies.
+                  </p>
+                  <div className="reg-feats">
+                    <div className="reg-feat-item">
+                      <span className="check-ic">✓</span>
+                      <span>1 on 1 Private Executive Meetings</span>
+                    </div>
+                    <div className="reg-feat-item">
+                      <span className="check-ic">✓</span>
+                      <span>Keynote &amp; Panel Session Access</span>
+                    </div>
+                    <div className="reg-feat-item">
+                      <span className="check-ic">✓</span>
+                      <span>VIP Receptions &amp; Networking Dinners</span>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  className="btn-track btn-teal"
+                  onClick={() => handleOpenForm("investor")}
+                >
+                  REGISTER AS&nbsp;INVESTOR
+                </button>
+              </div>
+
+              {/* TRACK 2: COMPANY */}
+              <div className="reg-track-card active">
+                <div className="reg-track-top">
+                  <div className="reg-track-meta">
+                    <span className="reg-tag">FOR COMPANIES</span>
+                    <span className="reg-num">02</span>
+                  </div>
+                  <h3>Company Registration</h3>
+                  <p>
+                    Register your mining company to showcase your projects and connect with a curated audience of international investors, family offices and funds.
+                  </p>
+                  <div className="reg-feats">
+                    <div className="reg-feat-item">
+                      <span className="check-ic">✓</span>
+                      <span>Corporate Project Showcase</span>
+                    </div>
+                    <div className="reg-feat-item">
+                      <span className="check-ic">✓</span>
+                      <span>Curated Accredited Investor Audience</span>
+                    </div>
+                    <div className="reg-feat-item">
+                      <span className="check-ic">✓</span>
+                      <span>Tier 1 Sponsorship Opportunities</span>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  className="btn-track btn-ghost"
+                  onClick={() => handleOpenForm("company")}
+                >
+                  REGISTER A&nbsp;COMPANY
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* IMPORTANT REGISTRATION NOTICE */}
+        <section className="reg-notice-sec">
+          <div className="wrap">
+            <div className="notice-card">
+              <div className="notice-main">
+                <span className="notice-tag">REGISTRATION POLICIES &amp; REQUIREMENTS</span>
+                <h3>Important Registration Notice</h3>
+                <p>
+                  Entry into THE Noble Mining Investment Conference and special hotel discount rates are restricted strictly to registered participants.
+                </p>
+                <p>
+                  You must register your attendance prior to the Event. You must receive an official invitation prior to the Event in order to receive your badge at the door. <strong>Walk-ins will not be accepted under any circumstances.</strong>
+                </p>
+              </div>
+              <div className="notice-side">
+                <div className="contact-head">Sponsorship Contact</div>
+                <div className="contact-name">Jennifer Choi</div>
+                <p className="contact-desc">
+                  To discuss Tier 1 sponsorship packages or custom options:
+                </p>
+                <a href="mailto:jchoi@irinc.ca" className="contact-email">
+                  jchoi@irinc.ca ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  // MODE 2: DEDICATED REGISTRATION FORM PAGE
   return (
-    <div className="pview on" id="pv-register">
-      {/* HERO */}
-      <section className="reg-hero">
-        <img
-          className="hero-art"
-          src="/assets/hero-art.webp"
-          alt="Registration Background"
-        />
-        <div className="hero-scrim"></div>
-        <div className="wrap reg-hero-inner">
-          <div className="reg-hero-left">
-            <span className="reg-badge">SAVE THE DATE — INVITATION ONLY</span>
-            <h1>
-              REGISTRATION <br />
-              <span className="gr">PORTAL</span>
-            </h1>
-            <div className="reg-bar"></div>
-          </div>
-          <div className="reg-event-card">
-            <div className="reg-card-loc">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
-              <span>Boca Raton Innovation Campus, Florida</span>
-            </div>
-            <div className="reg-card-date">February 17–18, 2027</div>
-            <p className="reg-card-sub">
-              THE Noble Mining Investment Conference: Invitation-only Tier 1 Conference for mining companies, accredited investors, family offices, institutions and funds.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* TRACK SELECTION CARDS */}
-      <section className="reg-tracks">
-        <div className="wrap">
-          <div className="reg-tracks-head">
-            <span className="eyebrow">CHOOSE YOUR PARTICIPATION TRACK</span>
-            <h2>Tailored Access for Investors &amp; Companies</h2>
-            <div className="reg-div-line"></div>
-          </div>
-          <div className="reg-track-grid">
-            {/* TRACK 1: INVESTOR */}
-            <div className={`reg-track-card ${activeTab === "investor" ? "active" : ""}`}>
-              <div className="reg-track-top">
-                <div className="reg-track-meta">
-                  <span className="reg-tag">FOR INVESTORS</span>
-                  <span className="reg-num">01</span>
-                </div>
-                <h3>Investor Registration</h3>
-                <p>
-                  Register as an accredited investor, family office, institution or fund to access privately arranged 1 on 1 meetings with leading mining companies.
-                </p>
-                <div className="reg-feats">
-                  <div className="reg-feat-item">
-                    <span className="check-ic">✓</span>
-                    <span>1 on 1 Private Executive Meetings</span>
-                  </div>
-                  <div className="reg-feat-item">
-                    <span className="check-ic">✓</span>
-                    <span>Keynote &amp; Panel Session Access</span>
-                  </div>
-                  <div className="reg-feat-item">
-                    <span className="check-ic">✓</span>
-                    <span>VIP Receptions &amp; Networking Dinners</span>
-                  </div>
-                </div>
-              </div>
-              <button
-                type="button"
-                className="btn-track btn-teal"
-                onClick={() => scrollToForm("investor")}
-              >
-                REGISTER AS INVESTOR
-              </button>
-            </div>
-
-            {/* TRACK 2: COMPANY */}
-            <div className={`reg-track-card ${activeTab === "company" ? "active" : ""}`}>
-              <div className="reg-track-top">
-                <div className="reg-track-meta">
-                  <span className="reg-tag">FOR COMPANIES</span>
-                  <span className="reg-num">02</span>
-                </div>
-                <h3>Company Registration</h3>
-                <p>
-                  Register your mining company to showcase your projects and connect with a curated audience of international investors, family offices and funds.
-                </p>
-                <div className="reg-feats">
-                  <div className="reg-feat-item">
-                    <span className="check-ic">✓</span>
-                    <span>Corporate Project Showcase</span>
-                  </div>
-                  <div className="reg-feat-item">
-                    <span className="check-ic">✓</span>
-                    <span>Curated Accredited Investor Audience</span>
-                  </div>
-                  <div className="reg-feat-item">
-                    <span className="check-ic">✓</span>
-                    <span>Tier 1 Sponsorship Opportunities</span>
-                  </div>
-                </div>
-              </div>
-              <button
-                type="button"
-                className="btn-track btn-ghost"
-                onClick={() => scrollToForm("company")}
-              >
-                REGISTER A COMPANY
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
+    <div className="pview on" id="pv-register-form">
       {/* REGISTRATION FORM SECTION */}
       <section className="reg-form-sec" id="registration-form-section">
         <div className="wrap max-form-wrap">
+          {/* BACK LINK */}
+          <div style={{ marginBottom: "20px" }}>
+            <button
+              type="button"
+              onClick={() => onNavigate && onNavigate("register")}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "var(--teal-dark)",
+                fontWeight: 700,
+                fontSize: "13px",
+                cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+              }}
+            >
+              &larr; Back to Track Options
+            </button>
+          </div>
+
           {/* TAB TOGGLE SWITCH */}
           <div className="form-toggle-bar">
             <button
@@ -193,9 +265,10 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
               onClick={() => {
                 setActiveTab("investor");
                 setSubmitted(false);
+                if (onNavigate) onNavigate("register-investor");
               }}
             >
-              Investor Registration Form
+              INVESTOR REGISTRATION FORM
             </button>
             <button
               type="button"
@@ -203,9 +276,10 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
               onClick={() => {
                 setActiveTab("company");
                 setSubmitted(false);
+                if (onNavigate) onNavigate("register-company");
               }}
             >
-              Company Registration Form
+              COMPANY REGISTRATION FORM
             </button>
           </div>
 
@@ -239,8 +313,8 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
               /* INVESTOR FORM */
               <div className="form-box">
                 <div className="form-head">
-                  <span className="eyebrow">ACCREDITED DELEGATE APPLICATION</span>
-                  <h2>Investor Registration Form</h2>
+                  <span className="eyebrow">ACCREDITED DELEGATE&nbsp;APPLICATION</span>
+                  <h2>Investor Registration&nbsp;Form</h2>
                   <div className="reg-div-line center"></div>
                 </div>
                 <form onSubmit={handleInvestorSubmit} className="reg-form">
@@ -584,6 +658,8 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
         </div>
       </section>
 
+      <PartnerMarquee />
+
       {/* IMPORTANT REGISTRATION NOTICE */}
       <section className="reg-notice-sec">
         <div className="wrap">
@@ -605,7 +681,7 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
                 To discuss Tier 1 sponsorship packages or custom options:
               </p>
               <a href="mailto:jchoi@irinc.ca" className="contact-email">
-                jchoi@irinc.ca ↗
+                jchoi@irinc.ca &nearr;
               </a>
             </div>
           </div>
@@ -633,7 +709,7 @@ export default function RegisterView({ onNavigate }: RegisterViewProps) {
             <button
               type="button"
               className="btn-teal"
-              onClick={() => scrollToForm("investor")}
+              onClick={() => handleOpenForm("investor")}
             >
               REGISTER HERE
             </button>

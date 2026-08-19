@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import PartnerMarquee from "@/components/PartnerMarquee";
 
 interface AboutViewProps {
   onNavigate: (view: string) => void;
@@ -30,9 +31,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             <span className="gr">THE CONFERENCE</span>
           </h1>
           <p className="dek">
-            THE Noble Mining Investment Conference brings together global leaders,
-            innovators and investors to shape a more sustainable and prosperous mining
-            industry.
+            Connecting leading resource companies with accredited investors, analysts, and institutional funds in Boca Raton, Florida — February 17–18, 2027.
           </p>
           <div className="hero-btns">
             <button
@@ -40,7 +39,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               type="button"
               onClick={() => onNavigate("register")}
             >
-              REGISTER HERE{" "}
+              REGISTER&nbsp;HERE{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -56,7 +55,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               href="#agenda"
               onClick={(e) => handleNavClick("agenda", e)}
             >
-              VIEW AGENDA{" "}
+              VIEW&nbsp;AGENDA{" "}
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -71,6 +70,8 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
         </div>
       </section>
 
+      <PartnerMarquee />
+
       {/* COLLABORATION */}
       <section className="collab">
         <div className="wrap collab-grid">
@@ -82,11 +83,11 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             />
           </div>
           <div>
-            <div className="eyebrow">ABOUT THE CONFERENCE</div>
+            <div className="eyebrow">ABOUT THE&nbsp;CONFERENCE</div>
             <h2>
               A Collaboration Built
               <br />
-              for Impact
+              for&nbsp;Impact
             </h2>
             <p>
               A collaboration between{" "}
@@ -109,9 +110,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               .
             </p>
             <p>
-              Over two days, the conference features up to 60 mining companies with
-              one on one meetings, presentations and exceptional networking
-              opportunities.
+              An invitation-only event featuring up to 60 mining issuers with one-on-one meetings, presentations and networking opportunities at the historic Boca Raton Innovation Campus.
             </p>
             <div className="feat-list">
               <div className="feat-li">
@@ -170,8 +169,8 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
       <section className="aud">
         <div className="wrap">
           <div className="aud-head">
-            <div className="eyebrow">WHO SHOULD ATTEND</div>
-            <h2>Connect with the Right Audience</h2>
+            <div className="eyebrow">WHO SHOULD&nbsp;ATTEND</div>
+            <h2>Connect with the Right&nbsp;Audience</h2>
           </div>
           <div className="aud-grid">
             <div className="aud-card">
@@ -231,11 +230,11 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
-                  <path d="M8.5 12.5L5 9.5 8 6l4 1.5L16 6l3 3.5-3.5 3M8.5 12.5l3.5 3.4 3.5-3.4M8.5 12.5L11 15M15.5 12.5L13 15" />
+                  <path d="M4 21h16M6 21V8l4-3v16M14 21V10h4v11M9.5 9h.01M9.5 12h.01M9.5 15h.01" />
                 </svg>
               </span>
-              <b>Advisors</b>
-              <p>Legal, financial and strategic advisors supporting the sector.</p>
+              <b>Mining Companies</b>
+              <p>Looking for opportunities to connect with international industry professionals.</p>
             </div>
             <div className="aud-card">
               <span className="aud-ic">
