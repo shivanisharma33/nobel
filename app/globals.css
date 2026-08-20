@@ -109,7 +109,7 @@ header.site {
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  height: 74px;
+  height: 104px;
 }
 
 .brand {
@@ -1360,7 +1360,7 @@ footer.site {
 .marquee-track {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
   width: max-content;
   animation: marq-left 38s linear infinite;
 }
@@ -1383,9 +1383,9 @@ footer.site {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  width: 220px;
-  flex: 0 0 220px;
+  height: 85px;
+  width: auto;
+  flex: 0 0 auto;
   padding: 6px 14px;
   background: transparent;
   border: none;
@@ -1407,10 +1407,10 @@ footer.site {
 }
 
 .partner-logo-img {
-  height: 56px !important;
-  max-height: 56px !important;
-  width: 190px !important;
-  max-width: 190px !important;
+  height: 60px !important;
+  max-height: 60px !important;
+  width: auto !important;
+  max-width: 175px !important;
   object-fit: contain !important;
   filter: none;
   display: flex !important;
@@ -1432,69 +1432,73 @@ footer.site {
   line-height: 1;
 }
 
-/* Individual Logo Visual Area Normalization */
+/* Individual Logo Visual Area Normalization - Medium Uniform Sizes */
 .logo-mining-ir {
-  height: 42px !important;
-  max-height: 42px !important;
+  height: 58px !important;
+  max-height: 58px !important;
 }
 
 .logo-mining-discovery {
-  height: 46px !important;
-  max-height: 46px !important;
+  height: 60px !important;
+  max-height: 60px !important;
 }
 
 .logo-rctv {
-  height: 44px !important;
-  max-height: 44px !important;
+  height: 58px !important;
+  max-height: 58px !important;
 }
 
 .logo-vid {
-  height: 46px !important;
-  max-height: 46px !important;
+  height: 60px !important;
+  max-height: 60px !important;
 }
 
 .logo-money-channel {
-  height: 48px !important;
-  max-height: 48px !important;
+  height: 64px !important;
+  max-height: 64px !important;
+  transform: scale(1.35);
 }
 
 .logo-tmx {
-  height: 46px !important;
-  max-height: 46px !important;
+  height: 64px !important;
+  max-height: 64px !important;
+  transform: scale(1.35);
 }
 
 .logo-stifel {
-  height: 46px !important;
-  max-height: 46px !important;
+  height: 60px !important;
+  max-height: 60px !important;
+  transform: scale(1.15);
 }
 
 .logo-cse {
-  height: 48px !important;
-  max-height: 48px !important;
+  height: 60px !important;
+  max-height: 60px !important;
+  transform: scale(1.15);
 }
 
 .logo-maxit {
-  height: 52px !important;
-  max-height: 52px !important;
+  height: 60px !important;
+  max-height: 60px !important;
   transform: scale(1.15);
 }
 
 .logo-altitude {
-  height: 60px !important;
-  max-height: 60px !important;
-  transform: scale(1.55);
+  height: 62px !important;
+  max-height: 62px !important;
+  transform: scale(1.35);
 }
 
 .logo-ventum {
-  height: 52px !important;
-  max-height: 52px !important;
-  transform: scale(1.1);
+  height: 60px !important;
+  max-height: 60px !important;
+  transform: scale(1.15);
 }
 
 .logo-red-cloud {
-  height: 48px !important;
-  max-height: 48px !important;
-  transform: scale(1.75);
+  height: 60px !important;
+  max-height: 60px !important;
+  transform: scale(1.35);
 }
 
 /* Partner Logo Hover Zoom */
@@ -2402,7 +2406,7 @@ footer.site {
 
 .pc-cta {
   background: var(--bg);
-  padding: 0 30px 70px;
+  padding: 60px 30px 70px;
 }
 
 .pc-cta-band {
@@ -2557,7 +2561,7 @@ footer.site {
 .ag-pdf {
   background: var(--lt-bg);
   color: var(--ink);
-  padding: 60px 0 10px;
+  padding: 60px 0 60px;
 }
 
 .agp-head {

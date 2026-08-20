@@ -242,12 +242,13 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
                   fill="none"
                   strokeWidth="1.7"
                   strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path d="M12 21s-6.5-5.3-6.5-10A6.5 6.5 0 0 1 12 4.5 6.5 6.5 0 0 1 18.5 11c0 4.7-6.5 10-6.5 10z" />
                   <circle cx="12" cy="11" r="2.3" />
                 </svg>
                 <span>
-                  Boca Raton, Florida
+                  Waterstone Resort &amp; Marina, 999 East Camino Real, Boca Raton, FL 33432
                 </span>
               </div>
               <div className="gv-row desc">
@@ -256,6 +257,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
                   fill="none"
                   strokeWidth="1.7"
                   strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <rect x="4" y="5" width="16" height="15" rx="2" />
                   <path d="M4 9.5h16M8 3v4M16 3v4" />
@@ -265,17 +267,43 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
                   Join us for an exclusive gala networking event on February 17 at Kasumi.
                 </span>
               </div>
-              <div style={{ marginTop: "20px" }}>
+              <div className="gv-row desc">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                <span>
+                  Experience modern Japanese waterfront dining overlooking Lake Boca. Enjoy seasonal sushi, wagyu, craft cocktails, and sunset terrace views rooted in authentic Omotenashi hospitality by Master Sushi Chef Toyoji Hemmi.
+                </span>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap", marginTop: "20px" }}>
                 <a
                   href="https://www.kasumiboca.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-teal"
-                  style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 18px", fontSize: "12px" }}
                 >
                   <span>VISIT KASUMI WEBSITE</span>
-                  <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "16px", height: "16px" }}>
+                  <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "15px", height: "15px" }}>
                     <path d="M14 4h6v6M20 4l-8 8M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.google.com/maps/dir//999+E+Camino+Real,+Boca+Raton,+FL+33432"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost"
+                  style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 18px", fontSize: "12px" }}
+                >
+                  <span>GET DIRECTIONS</span>
+                  <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "15px", height: "15px" }}>
+                    <path d="M12 21s-6.5-5.3-6.5-10A6.5 6.5 0 0 1 12 4.5 6.5 6.5 0 0 1 18.5 11c0 4.7-6.5 10-6.5 10z" />
                   </svg>
                 </a>
               </div>

@@ -27,8 +27,11 @@ export default function Header({ activeView, onNavigate }: HeaderProps) {
           onClick={(e) => handleNavClick("home", e)}
         >
           <div className="noble-cm">
-            <img src="/assets/noble-cm.webp" alt="Noble Capital Markets" />
-            <span className="ncm-cap">NOBLE CAPITAL MARKETS</span>
+            <img
+              src="/assets/Copy of THE (3000 x 3000 px).png"
+              alt="THE Noble Mining Investment Conference"
+              style={{ height: "92px", width: "auto", objectFit: "contain" }}
+            />
           </div>
         </a>
         <nav className="main">
