@@ -46,7 +46,7 @@ export default function PartnerMarquee() {
                   <img
                     src={item.src}
                     alt={item.alt}
-                    className="partner-logo-img"
+                    className={`partner-logo-img ${item.id}`}
                   />
                 </div>
               ))}
