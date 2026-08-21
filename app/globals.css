@@ -4025,6 +4025,34 @@ input:focus-visible {
   transform: translateX(4px);
 }
 
+/* Submitting state — keeps the resting look, just muted and non-interactive */
+.submit-btn:disabled,
+.submit-btn:disabled:hover {
+  background: linear-gradient(135deg, #10262c 0%, #1e8f77 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(47, 191, 156, 0.4) !important;
+  box-shadow: 0 8px 24px rgba(16, 38, 44, 0.25);
+  opacity: 0.6;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.submit-btn:disabled:hover svg {
+  transform: none;
+}
+
+.form-error-msg {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #fdecea;
+  border: 1px solid #f0c2bc;
+  color: #8f2c22;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
 .form-success {
   text-align: center;
   padding: 40px 20px;

@@ -2,12 +2,48 @@
 
 import React, { useState } from "react";
 import PartnerMarquee from "@/components/PartnerMarquee";
+import {
+  REGISTRATION_ERROR_MESSAGE,
+  submitNobleCompanyRegistration,
+  submitNobleInvestorRegistration,
+} from "@/lib/api/registrations";
 
 interface RegisterViewProps {
   onNavigate?: (view: string) => void;
   initialTab?: "investor" | "company";
   mode?: "tracks" | "form";
 }
+
+const INVESTOR_FORM_DEFAULTS = {
+  firmName: "",
+  firstName: "",
+  lastName: "",
+  title: "",
+  city: "",
+  country: "",
+  email: "",
+  phone: "",
+  aum: "",
+  investorType: "Institutional Investor",
+  notes: "",
+  updates: true,
+};
+
+const COMPANY_FORM_DEFAULTS = {
+  companyName: "",
+  ticker: "",
+  firstName: "",
+  lastName: "",
+  title: "",
+  city: "",
+  country: "",
+  email: "",
+  phone: "",
+  commodity: "",
+  marketCap: "",
+  overview: "",
+  updates: true,
+};
 
 export default function RegisterView({
   onNavigate,
@@ -17,6 +53,8 @@ export default function RegisterView({
   const [activeTab, setActiveTab] = useState<"investor" | "company">(initialTab);
   const [submitted, setSubmitted] = useState(false);
   const [submittedType, setSubmittedType] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   React.useEffect(() => {
     if (initialTab) {
@@ -25,57 +63,57 @@ export default function RegisterView({
   }, [initialTab]);
 
   // Investor form state
-  const [invForm, setInvForm] = useState({
-    firmName: "",
-    firstName: "",
-    lastName: "",
-    title: "",
-    city: "",
-    country: "",
-    email: "",
-    phone: "",
-    aum: "",
-    investorType: "Institutional Investor",
-    notes: "",
-    updates: true,
-  });
+  const [invForm, setInvForm] = useState(INVESTOR_FORM_DEFAULTS);
 
   // Company form state
-  const [compForm, setCompForm] = useState({
-    companyName: "",
-    ticker: "",
-    firstName: "",
-    lastName: "",
-    title: "",
-    city: "",
-    country: "",
-    email: "",
-    phone: "",
-    commodity: "",
-    marketCap: "",
-    overview: "",
-    updates: true,
-  });
+  const [compForm, setCompForm] = useState(COMPANY_FORM_DEFAULTS);
 
   const handleOpenForm = (tab: "investor" | "company") => {
     setActiveTab(tab);
     setSubmitted(false);
+    setErrorMsg("");
     if (onNavigate) {
       onNavigate(tab === "investor" ? "register-investor" : "register-company");
     }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleInvestorSubmit = (e: React.FormEvent) => {
+  const handleInvestorSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmittedType("Investor");
-    setSubmitted(true);
+    if (submitting) return; // guard against double-clicks / duplicate submits
+    setSubmitting(true);
+    setErrorMsg("");
+
+    try {
+      await submitNobleInvestorRegistration(invForm);
+      setInvForm(INVESTOR_FORM_DEFAULTS);
+      setSubmittedType("Investor");
+      setSubmitted(true);
+    } catch {
+      // Details are logged by the API client in development only.
+      setErrorMsg(REGISTRATION_ERROR_MESSAGE);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
-  const handleCompanySubmit = (e: React.FormEvent) => {
+  const handleCompanySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmittedType("Company");
-    setSubmitted(true);
+    if (submitting) return; // guard against double-clicks / duplicate submits
+    setSubmitting(true);
+    setErrorMsg("");
+
+    try {
+      await submitNobleCompanyRegistration(compForm);
+      setCompForm(COMPANY_FORM_DEFAULTS);
+      setSubmittedType("Company");
+      setSubmitted(true);
+    } catch {
+      // Details are logged by the API client in development only.
+      setErrorMsg(REGISTRATION_ERROR_MESSAGE);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   // MODE 1: TRACK SELECTION OVERVIEW PAGE
@@ -265,6 +303,7 @@ export default function RegisterView({
               onClick={() => {
                 setActiveTab("investor");
                 setSubmitted(false);
+                setErrorMsg("");
                 if (onNavigate) onNavigate("register-investor");
               }}
             >
@@ -276,6 +315,7 @@ export default function RegisterView({
               onClick={() => {
                 setActiveTab("company");
                 setSubmitted(false);
+                setErrorMsg("");
                 if (onNavigate) onNavigate("register-company");
               }}
             >
@@ -468,8 +508,16 @@ export default function RegisterView({
                     </label>
                   </div>
 
-                  <button type="submit" className="btn-teal submit-btn">
-                    <span>COMPLETE INVESTOR REGISTRATION</span>
+                  {errorMsg && (
+                    <div className="form-error-msg" role="alert">
+                      {errorMsg}
+                    </div>
+                  )}
+
+                  <button type="submit" className="btn-teal submit-btn" disabled={submitting}>
+                    <span>
+                      {submitting ? "SUBMITTING…" : "COMPLETE INVESTOR REGISTRATION"}
+                    </span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
                     </svg>
@@ -645,8 +693,16 @@ export default function RegisterView({
                     </label>
                   </div>
 
-                  <button type="submit" className="btn-teal submit-btn">
-                    <span>SUBMIT COMPANY REGISTRATION</span>
+                  {errorMsg && (
+                    <div className="form-error-msg" role="alert">
+                      {errorMsg}
+                    </div>
+                  )}
+
+                  <button type="submit" className="btn-teal submit-btn" disabled={submitting}>
+                    <span>
+                      {submitting ? "SUBMITTING…" : "SUBMIT COMPANY REGISTRATION"}
+                    </span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
                     </svg>
