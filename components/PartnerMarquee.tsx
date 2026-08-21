@@ -4,145 +4,24 @@ import React from "react";
 
 interface Partner {
   id: string;
-  tag: string;
-  content: React.ReactNode;
+  alt: string;
+  src: string;
 }
 
 export default function PartnerMarquee() {
   const partners: Partner[] = [
-    {
-      id: "mining-ir",
-      tag: "Investor Relations",
-      content: (
-        <img
-          src="/assets/logo-miningir.png"
-          alt="Mining IR"
-          className="partner-logo-img logo-mining-ir"
-        />
-      ),
-    },
-    {
-      id: "mining-discovery",
-      tag: "Industry News",
-      content: (
-        <img
-          src="/assets/mining-discovery.png"
-          alt="Mining Discovery"
-          className="partner-logo-img logo-mining-discovery"
-        />
-      ),
-    },
-    {
-      id: "rctv",
-      tag: "Broadcast Media",
-      content: (
-        <div className="partner-logo-img rctv-logo-box logo-rctv">
-          <svg width="24" height="24" viewBox="0 0 18 18">
-            <circle cx="9" cy="9" r="8" fill="#e8442c" />
-          </svg>
-          <span>RCTV</span>
-        </div>
-      ),
-    },
-    {
-      id: "vid",
-      tag: "Video Platform",
-      content: (
-        <img
-          src="/assets/logo.webp"
-          alt="VID"
-          className="partner-logo-img logo-vid"
-        />
-      ),
-    },
-    {
-      id: "money-channel",
-      tag: "Financial Media",
-      content: (
-        <img
-          src="/assets/the-money-channel.jpg"
-          alt="The Money Channel New York City"
-          className="partner-logo-img logo-money-channel"
-        />
-      ),
-    },
-    {
-      id: "tmx",
-      tag: "Stock Exchange",
-      content: (
-        <img
-          src="/assets/04-TMX.png"
-          alt="TMX Group"
-          className="partner-logo-img logo-tmx"
-        />
-      ),
-    },
-    {
-      id: "stifel",
-      tag: "Investment Banking",
-      content: (
-        <img
-          src="/assets/stifel-logo-resized.jpg"
-          alt="Stifel"
-          className="partner-logo-img logo-stifel"
-        />
-      ),
-    },
-    {
-      id: "cse",
-      tag: "Securities Exchange",
-      content: (
-        <img
-          src="/assets/CSE-Logo-RGB.webp"
-          alt="Canadian Securities Exchange"
-          className="partner-logo-img logo-cse"
-        />
-      ),
-    },
-    {
-      id: "maxit",
-      tag: "Financial Advisory",
-      content: (
-        <img
-          src="/assets/maxit_st_cmyk_lg.webp"
-          alt="Maxit Capital"
-          className="partner-logo-img logo-maxit"
-        />
-      ),
-    },
-    {
-      id: "altitude",
-      tag: "Capital Partners",
-      content: (
-        <img
-          src="/assets/logo.png"
-          alt="Altitude Capital Partners"
-          className="partner-logo-img logo-altitude"
-        />
-      ),
-    },
-    {
-      id: "ventum",
-      tag: "Capital Markets",
-      content: (
-        <img
-          src="/assets/Ventum_Financial_RGB.webp"
-          alt="Ventum Capital Markets"
-          className="partner-logo-img logo-ventum"
-        />
-      ),
-    },
-    {
-      id: "red-cloud",
-      tag: "Mining Advisory",
-      content: (
-        <img
-          src="/assets/image (2).webp"
-          alt="Red Cloud Securities"
-          className="partner-logo-img logo-red-cloud"
-        />
-      ),
-    },
+    { id: "logo-10", alt: "Partner Logo 10", src: "/logo/10.svg" },
+    { id: "logo-11", alt: "Partner Logo 11", src: "/logo/11.svg" },
+    { id: "logo-12", alt: "Partner Logo 12", src: "/logo/12.svg" },
+    { id: "logo-13", alt: "Partner Logo 13", src: "/logo/13.svg" },
+    { id: "logo-14", alt: "Partner Logo 14", src: "/logo/14.svg" },
+    { id: "logo-15", alt: "Partner Logo 15", src: "/logo/15.svg" },
+    { id: "logo-16", alt: "Partner Logo 16", src: "/logo/16.svg" },
+    { id: "logo-17", alt: "Partner Logo 17", src: "/logo/17.svg" },
+    { id: "logo-18", alt: "Partner Logo 18", src: "/logo/18.svg" },
+    { id: "logo-19", alt: "Partner Logo 19", src: "/logo/19.svg" },
+    { id: "logo-20", alt: "Partner Logo 20", src: "/logo/20.svg" },
+    { id: "logo-21", alt: "Partner Logo 21", src: "/logo/21.svg" },
   ];
 
   const duplicatedPartners = [...partners, ...partners, ...partners];
@@ -164,7 +43,11 @@ export default function PartnerMarquee() {
             <div className="marquee-track">
               {duplicatedPartners.map((item, index) => (
                 <div key={`p-${item.id}-${index}`} className="partner-card">
-                  {item.content}
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    className="partner-logo-img"
+                  />
                 </div>
               ))}
             </div>
@@ -174,3 +57,4 @@ export default function PartnerMarquee() {
     </section>
   );
 }
+
