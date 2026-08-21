@@ -109,7 +109,7 @@ header.site {
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  height: 104px;
+  height: 114px;
 }
 
 .brand {
@@ -130,6 +130,24 @@ header.site {
   display: block;
   object-fit: contain;
   flex-shrink: 0;
+}
+
+.hdr .nav-logo,
+.ft .nav-logo,
+.ft-brand .nav-logo,
+footer .nav-logo,
+.nav-logo {
+  height: 105px;
+  width: auto;
+  max-height: 105px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.brand:hover .nav-logo {
+  transform: scale(1.04);
+  filter: drop-shadow(0 4px 14px rgba(255, 255, 255, 0.2));
 }
 
 .ft-brand .brand-mark {
@@ -613,11 +631,17 @@ nav.main a.active {
 }
 
 .global-events-hero-logo {
-  height: 96px;
-  max-height: 96px;
+  height: 100px;
+  max-height: 100px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.global-events-hero-logo:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 6px 16px rgba(47, 191, 156, 0.25));
 }
 
 .hdr .noble-cm,
@@ -628,10 +652,10 @@ footer .noble-cm {
   align-items: flex-start;
 }
 
-.hdr .noble-cm img,
-.ft .noble-cm img,
-.ft-brand .noble-cm img,
-footer .noble-cm img {
+.hdr .noble-cm img:not(.nav-logo),
+.ft .noble-cm img:not(.nav-logo),
+.ft-brand .noble-cm img:not(.nav-logo),
+footer .noble-cm img:not(.nav-logo) {
   height: 32px;
   width: auto;
 }
@@ -3466,6 +3490,10 @@ footer.site {
   .brand-mark {
     width: 30px;
     height: 30px;
+  }
+
+  .nav-logo {
+    height: 60px;
   }
 
   .brand-txt b {

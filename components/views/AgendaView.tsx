@@ -248,7 +248,7 @@ export default function AgendaView({ onNavigate }: AgendaViewProps) {
             <button
               className="btn-ghost"
               type="button"
-              onClick={() => alert("Registration opening soon!")}
+              onClick={() => onNavigate("register")}
             >
               REGISTER&nbsp;HERE{" "}
               <svg

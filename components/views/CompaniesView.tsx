@@ -117,7 +117,7 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
             <button
               className="btn-teal"
               type="button"
-              onClick={() => alert("Registration opening soon!")}
+              onClick={() => onNavigate("register")}
             >
               REGISTER TO STAY&nbsp;UPDATED{" "}
               <svg
@@ -133,7 +133,7 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
             <button
               className="btn-ghost"
               type="button"
-              onClick={() => alert("Contact form opening soon!")}
+              onClick={() => onNavigate("register-company")}
             >
               CONTACT&nbsp;US
             </button>

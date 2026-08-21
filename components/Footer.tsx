@@ -34,9 +34,9 @@ export default function Footer({ onNavigate }: FooterProps) {
           >
             <div className="noble-cm">
               <img
-                src="/assets/Copy of THE (3000 x 3000 px).png"
-                alt="THE Noble Mining Investment Conference"
-                style={{ height: "92px", width: "auto", objectFit: "contain" }}
+                src="/assets/THE Event Global Logo.png"
+                alt="Global Events - THE Mining Investment Event"
+                className="nav-logo"
               />
             </div>
           </a>

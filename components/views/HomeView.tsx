@@ -185,8 +185,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div className="hero-btns">
             <a
               className="btn-teal"
-              href="#contact"
-              onClick={(e) => handleNavClick("about", e)}
+              href="#register"
+              onClick={(e) => handleNavClick("register", e)}
             >
               REGISTER&nbsp;HERE{" "}
               <svg
@@ -217,8 +217,8 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
 
             <img
               className="hero-partner-logo global-events-hero-logo"
-              src="/assets/global-events-logo.png"
-              alt="Global Events Logo"
+              src="/assets/THE Event Global Logo.png"
+              alt="Global Events - THE Mining Investment Event"
             />
           </div>
         </div>
