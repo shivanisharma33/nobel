@@ -39,7 +39,7 @@ export default function Header({ activeView, onNavigate }: HeaderProps) {
             <img
               src="/assets/THE Event Global Logo.png"
               alt="Global Events - THE Mining Investment Event"
-              className="nav-logo"
+              className="nav-logo nav-circle-logo"
             />
           </div>
         </a>
