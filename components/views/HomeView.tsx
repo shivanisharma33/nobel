@@ -226,73 +226,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
 
       <PartnerMarquee />
 
-      {/* ================= STATS / PREMIER EXPERIENCE ================= */}
-      <section className="stats" id="stats">
-        <div className="wrap">
-          <div className="stats-header">
-            <span className="stats-pill">
-              <span className="pill-dot"></span>
-              EVENT HIGHLIGHTS
-            </span>
-            <h2 className="stats-title">A PREMIER MINING INVESTMENT&nbsp;EXPERIENCE</h2>
-          </div>
-          <div className="stats-grid">
-            <div className="stat-card">
-              <div className="stat-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round">
-                  <circle cx="9" cy="8" r="3.2" />
-                  <path d="M3.5 19c.6-3 2.8-4.6 5.5-4.6S13.9 16 14.5 19" />
-                  <circle cx="16.5" cy="9" r="2.6" />
-                  <path d="M16 14.6c2.4.1 4 1.6 4.5 4.4" />
-                </svg>
-              </div>
-              <div className="stat-val">500+</div>
-              <div className="stat-label">Attendees</div>
-              <p>Investors, funds, brokers &amp; industry leaders</p>
-            </div>
 
-            <div className="stat-card">
-              <div className="stat-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M3 12h18" />
-                </svg>
-              </div>
-              <div className="stat-val">25+</div>
-              <div className="stat-label">Countries</div>
-              <p>Global participation &amp; international reach</p>
-            </div>
-
-            <div className="stat-card">
-              <div className="stat-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="none" strokeWidth="1.5" strokeLinecap="round">
-                  <path d="M4 21h16M6 21V8l4-3v16M14 21V10h4v11M12 8h.01M12 12h.01M12 16h.01" />
-                </svg>
-              </div>
-              <div className="stat-val">Up to 60</div>
-              <div className="stat-label">Mining Companies</div>
-              <p>Presenting &amp; meeting with active investors</p>
-            </div>
-
-            <div className="stat-card">
-              <div className="stat-icon-wrap">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M8.5 12.5L5 9.5 8 6l4 1.5L16 6l3 3.5-3.5 3M8.5 12.5l3.5 3.4 3.5-3.4M8.5 12.5L11 15M15.5 12.5L13 15" />
-                </svg>
-              </div>
-              <div className="stat-val">1 : 1</div>
-              <div className="stat-label">1 ON 1&nbsp;MEETINGS</div>
-              <p>Pre-scheduled private 1 on 1 sessions</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ================= ABOUT THE CONFERENCE ================= */}
       <section className="aconf" id="aboutconf">
@@ -300,15 +234,10 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div>
             <h2>ABOUT THE&nbsp;CONFERENCE</h2>
             <p>
-              THE Noble Mining Investment Conference brings together global leaders,
-              innovators and investors to shape a more sustainable and prosperous
-              mining industry.
+              THE Noble Conference is an invitation-only event featuring up to 60 mining issuers and will offer one-on-one meetings and presentations, along with multiple networking opportunities, including a gala networking event planned for the evening of February 17.
             </p>
             <p>
-              Join us for two days of high-impact presentations, one on one meetings and
-              exceptional networking opportunities
-              <br />
-              including a gala networking event on February 17.
+              It will be held at the historic Boca Raton Innovation Campus. Originally constructed by IBM in the late 1960s as its North American R&D center—the birthplace of the IBM personal computer—the campus now features cutting-edge conference facilities and hosts leading tech companies.
             </p>
             <a
               className="btn-ghost"

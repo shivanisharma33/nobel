@@ -171,22 +171,22 @@ export default function RegisterView({
                     <span className="reg-tag">FOR INVESTORS</span>
                     <span className="reg-num">01</span>
                   </div>
-                  <h3>Investor Registration</h3>
+                  <h3>Register as an Investor</h3>
                   <p>
                     Register as an accredited investor, family office, institution or fund to access privately arranged 1 on 1 meetings with leading mining companies.
                   </p>
                   <div className="reg-feats">
                     <div className="reg-feat-item">
                       <span className="check-ic">✓</span>
-                      <span>1 on 1 Private Executive Meetings</span>
+                      <span>1 on 1 Private Meetings</span>
                     </div>
                     <div className="reg-feat-item">
                       <span className="check-ic">✓</span>
-                      <span>Keynote &amp; Panel Session Access</span>
+                      <span>Access to Keynotes, Panels and Presentations</span>
                     </div>
                     <div className="reg-feat-item">
                       <span className="check-ic">✓</span>
-                      <span>VIP Receptions &amp; Networking Dinners</span>
+                      <span>Networking Events and Gala Event, February 17</span>
                     </div>
                   </div>
                 </div>
@@ -195,7 +195,7 @@ export default function RegisterView({
                   className="btn-track btn-teal"
                   onClick={() => handleOpenForm("investor")}
                 >
-                  REGISTER AS&nbsp;INVESTOR
+                  REGISTER AS AN&nbsp;INVESTOR
                 </button>
               </div>
 
@@ -206,7 +206,7 @@ export default function RegisterView({
                     <span className="reg-tag">FOR COMPANIES</span>
                     <span className="reg-num">02</span>
                   </div>
-                  <h3>Company Registration</h3>
+                  <h3>Register as a Company</h3>
                   <p>
                     Register your mining company to showcase your projects and connect with a curated audience of international investors, family offices and funds.
                   </p>
@@ -230,7 +230,7 @@ export default function RegisterView({
                   className="btn-track btn-ghost"
                   onClick={() => handleOpenForm("company")}
                 >
-                  REGISTER A&nbsp;COMPANY
+                  REGISTER AS A&nbsp;COMPANY
                 </button>
               </div>
             </div>
@@ -307,7 +307,7 @@ export default function RegisterView({
                 if (onNavigate) onNavigate("register-investor");
               }}
             >
-              INVESTOR REGISTRATION FORM
+              REGISTER AS AN INVESTOR
             </button>
             <button
               type="button"
@@ -319,7 +319,7 @@ export default function RegisterView({
                 if (onNavigate) onNavigate("register-company");
               }}
             >
-              COMPANY REGISTRATION FORM
+              REGISTER AS A COMPANY
             </button>
           </div>
 
@@ -354,7 +354,7 @@ export default function RegisterView({
               <div className="form-box">
                 <div className="form-head">
                   <span className="eyebrow">ACCREDITED DELEGATE&nbsp;APPLICATION</span>
-                  <h2>Investor Registration&nbsp;Form</h2>
+                  <h2>Register as an&nbsp;Investor</h2>
                   <div className="reg-div-line center"></div>
                 </div>
                 <form onSubmit={handleInvestorSubmit} className="reg-form">
@@ -529,7 +529,7 @@ export default function RegisterView({
               <div className="form-box">
                 <div className="form-head">
                   <span className="eyebrow">MINING COMPANY APPLICATION</span>
-                  <h2>Company Registration Form</h2>
+                  <h2>Register as a&nbsp;Company</h2>
                   <div className="reg-div-line center"></div>
                 </div>
                 <form onSubmit={handleCompanySubmit} className="reg-form">
