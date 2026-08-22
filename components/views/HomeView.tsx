@@ -211,8 +211,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div className="partner-line">IN PARTNERSHIP WITH</div>
           <div className="hero-partners">
             <span className="noble-cm">
-              <img src="/assets/noble-cm.webp" alt="Noble Capital Markets" />
-              <span className="ncm-cap">NOBLE CAPITAL MARKETS</span>
+              <img src="/assets/Asset 10@2x.png" alt="Noble Capital Markets" />
             </span>
 
             <img

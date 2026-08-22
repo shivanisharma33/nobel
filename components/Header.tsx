@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 
 interface HeaderProps {
   activeView: string;
@@ -29,11 +28,10 @@ export default function Header({ activeView, onNavigate }: HeaderProps) {
           <div className="brand-logos">
             <div className="noble-cm nav-nobel-brand">
               <img
-                src="/assets/noble-cm.webp"
+                src="/assets/Asset 10@2x.png"
                 alt="Noble Capital Markets"
                 className="nav-nobel-logo"
               />
-              <span className="ncm-cap">NOBLE CAPITAL MARKETS</span>
             </div>
             <div className="brand-divider" aria-hidden="true" />
             <img

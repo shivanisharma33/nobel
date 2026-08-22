@@ -136,7 +136,7 @@ header.site {
 }
 
 .nav-nobel-logo {
-  height: 54px;
+  height: 85px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -145,7 +145,7 @@ header.site {
 
 .brand-divider {
   width: 1px;
-  height: 56px;
+  height: 70px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(47, 191, 156, 0.45), rgba(255, 255, 255, 0.05));
   flex-shrink: 0;
 }
@@ -165,8 +165,8 @@ header.site {
 
 .hdr .nav-circle-logo,
 .hdr .nav-logo {
-  height: 68px;
-  max-height: 68px;
+  height: 85px;
+  max-height: 85px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -696,7 +696,7 @@ footer .noble-cm {
 .ft .noble-cm img:not(.nav-logo),
 .ft-brand .noble-cm img:not(.nav-logo),
 footer .noble-cm img:not(.nav-logo) {
-  height: 32px;
+  height: 50px;
   width: auto;
 }
 
