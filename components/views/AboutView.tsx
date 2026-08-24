@@ -90,7 +90,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               for&nbsp;Impact
             </h2>
             <p>
-              The Noble Mining Investment Conference is a collaboration between{" "}
+              THE Noble Mining Investment Conference is a collaboration between{" "}
               <a
                 href="https://www.themininginvestmentevent.com"
                 target="_blank"
@@ -110,7 +110,7 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               , a comprehensive SEC/FINRA-registered broker-dealer headquartered in Boca Raton, focused solely on serving public and private companies.
             </p>
             <p>
-              The Noble Mining Investment Conference will offer mining companies exclusive opportunities to connect with local and international family offices, high-net-worth individuals, funds, brokers, analysts, and buy-side representatives, including corporate development teams exploring international investments.
+              THE Noble Mining Investment Conference will offer mining companies exclusive opportunities to connect with local and international family offices, high-net-worth individuals, funds, brokers, analysts, and buy-side representatives, including corporate development teams exploring international investments.
             </p>
             <div className="feat-list">
               <div className="feat-li">

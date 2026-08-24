@@ -233,10 +233,10 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div>
             <h2>ABOUT THE&nbsp;CONFERENCE</h2>
             <p>
-              The Noble Mining Investment Conference is a collaboration between THE Mining Investment Event, which takes place annually in June in Quebec City, and Noble Capital Markets, a comprehensive SEC/FINRA-registered broker-dealer headquartered in Boca Raton, focused solely on serving public and private companies.
+              THE Noble Mining Investment Conference is a collaboration between THE Mining Investment Event, which takes place annually in June in Quebec City, and Noble Capital Markets, a comprehensive SEC/FINRA-registered broker-dealer headquartered in Boca Raton, focused solely on serving public and private companies.
             </p>
             <p>
-              The Noble Mining Investment Conference will offer mining companies exclusive opportunities to connect with local and international family offices, high-net-worth individuals, funds, brokers, analysts, and buy-side representatives, including corporate development teams exploring international investments.
+              THE Noble Mining Investment Conference will offer mining companies exclusive opportunities to connect with local and international family offices, high-net-worth individuals, funds, brokers, analysts, and buy-side representatives, including corporate development teams exploring international investments.
             </p>
             <a
               className="btn-ghost"
