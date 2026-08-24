@@ -10,12 +10,17 @@ interface VenueViewProps {
 export default function VenueView({ onNavigate }: VenueViewProps) {
   const hotels = [
     {
+      name: "Hampton Inn Boca Raton",
+      dist: "Walking Distance (14 mins) / 2–5 min drive",
+      image: "/assets/images (1).jpeg",
+      link: "https://www.hilton.com/en/book/reservation/rooms/?ctyhocn=BCTFLHX&arrivalDate=2026-09-23&departureDate=2026-09-24&room1NumAdults=2&inputModule=HOTEL_SEARCH&viewPackagesAndPromotionsRate=true&WT.mc_id=zLADA0US1HX2OLX3GGL4ADVMETA5LF6_BCTFLHX7_129231037_&adType=PD&dsclid=80584914812567552&hmGUID=d0cc4dac-9dd7-4bbf-b778-c82284ce845b",
+    },
+    {
       name: "Waterstone Resort & Marina Boca Raton",
       dist: "Curio Collection by Hilton",
       image: "/assets/images (3).jpeg",
       link: "https://www.hilton.com/en/hotels/bctbuqq-waterstone-resort-and-marina-boca-raton/?WT.mc_id=zLADA0AA1QQ2PSH3GGL4AMPHTBRD_Oct5GNPLTPMWBRNLAB6BCTBUQQ7EN8i142435__z22150162559z__&gclsrc=aw.ds&&utm_campaign=%7Bcampaign%7D&utm_adgroup=%7Badgroup%7D&utm_keyword=waterstone%20resort%20%26%20marina%20boca%20raton%20curio%20collection%20by%20hilton&gad_source=1&gad_campaignid=22150162559&gbraid=0AAAAA-Q0XEbzEk5RoeOwx95koEJq-JLh_&gclid=EAIaIQobChMIqrPw7f-nlgMVuIDCCB10DwkMEAAYASAAEgJBevD_BwE",
     },
-
     {
       name: "The Embassy Suites",
       dist: "4.6 km",
@@ -122,12 +127,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
               </span>
               <div>
                 <b>GALA NETWORKING EVENT – FEB 17</b>
-                <p>
-                  The Boca Raton Resort
-                  <small>
-                    Boca Raton, Florida
-                  </small>
-                </p>
+                <p>To Be Announced</p>
               </div>
             </div>
           </div>

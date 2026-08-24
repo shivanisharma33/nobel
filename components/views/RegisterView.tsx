@@ -245,7 +245,7 @@ export default function RegisterView({
                 <span className="notice-tag">REGISTRATION POLICIES &amp; REQUIREMENTS</span>
                 <h3>Important Registration Notice</h3>
                 <p>
-                  Entry into THE Noble Mining Investment Conference and special hotel discount rates are restricted strictly to registered participants.
+                  Entry into THE Noble Mining Investment Conference is restricted strictly to registered participants.
                 </p>
                 <p>
                   You must register your attendance prior to the Event. You must receive an official invitation prior to the Event in order to receive your badge at the door. <strong>Walk-ins will not be accepted under any circumstances.</strong>
@@ -724,7 +724,7 @@ export default function RegisterView({
               <span className="notice-tag">REGISTRATION POLICIES &amp; REQUIREMENTS</span>
               <h3>Important Registration Notice</h3>
               <p>
-                Entry into THE Noble Mining Investment Conference and special hotel discount rates are restricted strictly to registered participants.
+                Entry into THE Noble Mining Investment Conference is restricted strictly to registered participants.
               </p>
               <p>
                 You must register your attendance prior to the Event. You must receive an official invitation prior to the Event in order to receive your badge at the door. <strong>Walk-ins will not be accepted under any circumstances.</strong>
