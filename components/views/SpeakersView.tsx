@@ -49,6 +49,12 @@ export default function SpeakersView({ onNavigate }: SpeakersViewProps) {
         </div>
       </section>
 
+
+
+
+
+      
+
       <PartnerMarquee />
 
       {/* COMING SOON CENTERPIECE */}

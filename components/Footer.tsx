@@ -15,6 +15,10 @@ export default function Footer({ onNavigate }: FooterProps) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+
+
+
+
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {

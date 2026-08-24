@@ -82,6 +82,12 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
         </div>
       </section>
 
+
+
+
+
+      
+
       <PartnerMarquee />
 
       {/* COMING SOON CENTERPIECE */}
@@ -372,7 +378,7 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
                           boxShadow: "0 0 8px #4fe0bb",
                         }}
                       />
-                      OFFICIAL PROSPECTUS PENDING
+                      OFFICIAL SPONSORS PENDING
                     </span>
                   </div>
 
@@ -387,7 +393,7 @@ export default function CompaniesView({ onNavigate }: CompaniesViewProps) {
                       fontFamily: "var(--font-inter), 'Inter', sans-serif",
                     }}
                   >
-                    SPONSOR PROSPECTUS <span className="gr">COMING SOON</span>
+                    SPONSORS <span className="gr">COMING SOON</span>
                   </h3>
 
                   {/* Subtext */}

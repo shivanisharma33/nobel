@@ -123,7 +123,7 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
               <div>
                 <b>GALA NETWORKING EVENT – FEB 17</b>
                 <p>
-                  Kasumi
+                  The Boca Raton Resort
                   <small>
                     Boca Raton, Florida
                   </small>
@@ -229,14 +229,14 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
           <div className="gala-card">
             <div className="g-art">
               <img
-                src="/assets/kasumi.png"
-                alt="Kasumi - Gala Venue"
+                src="/assets/images (3).jpeg"
+                alt="The Boca Raton Resort - Gala Venue"
                 style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", inset: 0 }}
               />
             </div>
             <div className="gala-body">
-              <div className="eyebrow">GALA VENUE</div>
-              <h2>Kasumi</h2>
+              <div className="eyebrow">GALA NETWORKING EVENT &ndash; FEB 17</div>
+              <h2>The Boca Raton Resort</h2>
               <div className="gv-row">
                 <svg
                   viewBox="0 0 24 24"
@@ -249,7 +249,9 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
                   <circle cx="12" cy="11" r="2.3" />
                 </svg>
                 <span>
-                  Waterstone Resort &amp; Marina, 999 East Camino Real, Boca Raton, FL 33432
+                  501 East Camino Real,
+                  <br />
+                  Boca Raton, Florida
                 </span>
               </div>
               <div className="gv-row desc">
@@ -265,38 +267,24 @@ export default function VenueView({ onNavigate }: VenueViewProps) {
                   <circle cx="15.5" cy="15" r="3" />
                 </svg>
                 <span>
-                  Join us for an exclusive gala networking event on February 17 at Kasumi.
-                </span>
-              </div>
-              <div className="gv-row desc">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  strokeWidth="1.7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-                <span>
-                  Experience modern Japanese waterfront dining overlooking Lake Boca. Enjoy seasonal sushi, wagyu, craft cocktails, and sunset terrace views rooted in authentic Omotenashi hospitality by Master Sushi Chef Toyoji Hemmi.
+                  Join us for an exclusive gala networking event on February 17 at this iconic oceanfront resort.
                 </span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap", marginTop: "20px" }}>
                 <a
-                  href="https://www.kasumiboca.com/"
+                  href="https://www.thebocaraton.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-teal"
                   style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 18px", fontSize: "12px" }}
                 >
-                  <span>VISIT KASUMI WEBSITE</span>
+                  <span>VISIT RESORT WEBSITE</span>
                   <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: "15px", height: "15px" }}>
                     <path d="M14 4h6v6M20 4l-8 8M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6" />
                   </svg>
                 </a>
                 <a
-                  href="https://www.google.com/maps/dir//999+E+Camino+Real,+Boca+Raton,+FL+33432"
+                  href="https://www.google.com/maps/dir//501+E+Camino+Real,+Boca+Raton,+FL+33432"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-ghost"

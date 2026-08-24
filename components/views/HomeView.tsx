@@ -233,10 +233,10 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div>
             <h2>ABOUT THE&nbsp;CONFERENCE</h2>
             <p>
-              THE Noble Conference is an invitation-only event featuring up to 60 mining issuers and will offer one-on-one meetings and presentations, along with multiple networking opportunities, including a gala networking event planned for the evening of February 17.
+              The Noble Mining Investment Conference is a collaboration between THE Mining Investment Event, which takes place annually in June in Quebec City, and Noble Capital Markets, a comprehensive SEC/FINRA-registered broker-dealer headquartered in Boca Raton, focused solely on serving public and private companies.
             </p>
             <p>
-              It will be held at the historic Boca Raton Innovation Campus. Originally constructed by IBM in the late 1960s as its North American R&D center—the birthplace of the IBM personal computer—the campus now features cutting-edge conference facilities and hosts leading tech companies.
+              The Noble Mining Investment Conference will offer mining companies exclusive opportunities to connect with local and international family offices, high-net-worth individuals, funds, brokers, analysts, and buy-side representatives, including corporate development teams exploring international investments.
             </p>
             <a
               className="btn-ghost"
